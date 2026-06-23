@@ -77,7 +77,7 @@
       <li><a href="#conservazione">Per quanto conserviamo i dati</a></li>
       <li><a href="#diritti">I tuoi diritti</a></li>
       <li><a href="#minori">Età minima (18+)</a></li>
-      <li><a href="#sicurezza">Sicurezza</a></li>
+      <li><a href="#sicurezza">Sicurezza e moderazione</a></li>
       <li><a href="#modifiche">Modifiche all'informativa</a></li>
       <li><a href="#contatti">Contatti</a></li>
     </ol>
@@ -118,6 +118,7 @@
   <ul>
     <li><strong>Ultimo accesso</strong> ("ultima attività"), mostrato agli altri utenti.</li>
     <li><strong>Dati statistici</strong> (Firebase Analytics) e <strong>diagnostici di crash</strong> (Firebase Crashlytics), per capire l'uso dell'App e correggere errori.</li>
+    <li><strong>Token per le notifiche push</strong> (Firebase Cloud Messaging): se attivi le notifiche, conserviamo un identificativo tecnico del dispositivo per inviarti avvisi (es. nuovi interessi). Puoi disattivarle dalle impostazioni del dispositivo.</li>
   </ul>
 
   <div class="box">
@@ -149,16 +150,17 @@
   <h2 id="visibilita">5. Cosa vedono gli altri utenti</h2>
   <ul>
     <li>Quando il tuo profilo è <strong>visibile</strong>, altri utenti possono vedere nome, foto, città approssimativa, stili di ballo, biografia, valutazioni e i tuoi annunci.</li>
-    <li>I tuoi <strong>recapiti di contatto</strong> (WhatsApp, Instagram, email, sito) sono mostrati secondo la regola di visibilità che imposti tu (ad esempio solo dopo uno scambio di interesse, solo agli utenti Premium, oppure nascosti).</li>
-    <li>Le <strong>foto</strong> caricate sono accessibili tramite link diretto: trattale come contenuti potenzialmente visibili. Non caricare immagini che non vuoi rendere visibili.</li>
+    <li>I tuoi <strong>recapiti di contatto</strong> (WhatsApp, Instagram, email, sito) <strong>non sono pubblici</strong>: vengono condivisi con un altro utente solo dopo che tu hai <strong>accettato un suo interesse</strong> e hai scelto <strong>esplicitamente</strong> quali canali concedergli. Puoi <strong>revocare</strong> l'accesso in qualsiasi momento. I recapiti sono conservati separatamente dal resto del profilo e accessibili solo tramite questo meccanismo.</li>
+    <li>Le <strong>foto</strong> possono essere <strong>sottoposte a revisione prima di diventare visibili</strong> (vedi la sezione &laquo;Sicurezza e moderazione&raquo;). Una volta pubblicate, sono accessibili tramite link diretto: non caricare immagini che non vuoi rendere visibili.</li>
   </ul>
 
   <h2 id="terze-parti">6. Fornitori e terze parti</h2>
   <p>Ci avvaliamo dei seguenti fornitori, che agiscono come Responsabili del trattamento o titolari autonomi per i rispettivi servizi:</p>
   <table>
     <tr><th>Fornitore</th><th>Servizio</th></tr>
-    <tr><td>Google / Firebase</td><td>Autenticazione, statistiche (Analytics), diagnostica crash (Crashlytics)</td></tr>
+    <tr><td>Google / Firebase</td><td>Autenticazione, statistiche (Analytics), diagnostica crash (Crashlytics), notifiche push (Cloud Messaging)</td></tr>
     <tr><td>Supabase</td><td>Database e archiviazione delle foto (server nell'Unione Europea)</td></tr>
+    <tr><td>Google Cloud (Vision / SafeSearch)</td><td>Analisi automatica delle immagini per la moderazione (se attivata)</td></tr>
     <tr><td>Google Play</td><td>Gestione e pagamento degli abbonamenti Premium</td></tr>
     <tr><td>OpenStreetMap / Nominatim</td><td>Geocodifica della città e mappe</td></tr>
   </table>
@@ -186,8 +188,9 @@
   <h2 id="minori">10. Età minima (18+)</h2>
   <p>DanceMate è riservata ai <strong>maggiorenni</strong>. Alla registrazione viene richiesta la data di nascita e l'accesso è negato a chi ha meno di 18 anni. Se veniamo a conoscenza di un account di un minore, lo rimuoviamo.</p>
 
-  <h2 id="sicurezza">11. Sicurezza</h2>
+  <h2 id="sicurezza">11. Sicurezza e moderazione dei contenuti</h2>
   <p>Adottiamo misure tecniche per proteggere i tuoi dati: comunicazioni cifrate (HTTPS), autenticazione tramite token, regole di accesso a livello di database (Row Level Security) che limitano la lettura e la modifica dei dati al legittimo proprietario. Le password sono gestite e protette dal provider di autenticazione e non sono accessibili al Titolare.</p>
+  <p>Per la sicurezza della community moderiamo i contenuti: le <strong>foto</strong> caricate possono essere sottoposte a revisione <strong>prima</strong> di diventare pubblicamente visibili (in attesa mostrano un'etichetta "in revisione"); i <strong>testi</strong> (annunci, biografia, messaggi) sono filtrati automaticamente per individuare contenuti vietati. La revisione delle foto è oggi prevalentemente manuale; in futuro potremo avvalerci di un servizio automatico di analisi delle immagini (<strong>Google Cloud Vision / SafeSearch</strong>) per rilevare contenuti inappropriati. Base giuridica: legittimo interesse alla sicurezza (art. 6.1.f).</p>
 
   <h2 id="modifiche">12. Modifiche all'informativa</h2>
   <p>Possiamo aggiornare questa informativa. In caso di modifiche rilevanti ne daremo avviso tramite l'App. La versione aggiornata è sempre pubblicata a questo indirizzo.</p>
@@ -197,10 +200,11 @@
 
   <hr>
   <footer>
-    DanceMate — Informativa sulla Privacy · Versione 1.0 · Ultimo aggiornamento <span>01/07/2026</span><br>
+    DanceMate — Informativa sulla Privacy · Versione 1.1 · Ultimo aggiornamento <span>23/06/2026</span><br>
     <a href="./terms.html">Termini di Servizio</a>
   </footer>
 
 </main>
 </body>
 </html>
+
