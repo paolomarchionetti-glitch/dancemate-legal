@@ -70,7 +70,7 @@
       <li><a href="#titolare">Titolare del trattamento</a></li>
       <li><a href="#dati">Dati che raccogliamo</a></li>
       <li><a href="#finalita">Finalità e basi giuridiche</a></li>
-      <li><a href="#posizione">La tua posizione (niente GPS)</a></li>
+      <li><a href="#posizione">La tua posizione (approssimata)</a></li>
       <li><a href="#visibilita">Cosa vedono gli altri utenti</a></li>
       <li><a href="#terze-parti">Fornitori e terze parti</a></li>
       <li><a href="#trasferimenti">Trasferimenti fuori dall'UE</a></li>
@@ -122,7 +122,7 @@
   </ul>
 
   <div class="box">
-    <strong>Cosa NON raccogliamo:</strong> non chiediamo né conserviamo il numero di telefono, e <strong>non raccogliamo la posizione GPS del tuo dispositivo</strong> (vedi sezione 4). Non gestiamo pagamenti con carta: gli abbonamenti passano interamente da Google Play.
+    <strong>Cosa NON raccogliamo:</strong> non chiediamo né conserviamo il numero di telefono, e <strong>non memorizziamo mai la posizione precisa</strong>: usiamo solo la posizione <strong>approssimata</strong>, arrotondata a circa 1&nbsp;km e solo con il tuo consenso (vedi sezione 4). Non gestiamo pagamenti con carta: gli abbonamenti passano interamente da Google Play.
   </div>
 
   <h2 id="finalita">3. Finalità e basi giuridiche</h2>
@@ -131,6 +131,7 @@
     <tr><td>Creazione e gestione dell'account</td><td>Esecuzione del contratto (art. 6.1.b)</td></tr>
     <tr><td>Verifica della maggiore età</td><td>Obbligo legale + contratto (art. 6.1.b/c)</td></tr>
     <tr><td>Pubblicazione del profilo e degli annunci, ricerca partner</td><td>Esecuzione del contratto (art. 6.1.b)</td></tr>
+    <tr><td>Posizione approssimata per la mappa e la ricerca di partner nella tua zona</td><td>Consenso (art. 6.1.a) — permesso posizione, revocabile</td></tr>
     <tr><td>Recapiti di contatto, foto, dati opzionali del profilo</td><td>Consenso (art. 6.1.a) — li inserisci volontariamente</td></tr>
     <tr><td>Moderazione, segnalazioni, sicurezza della community</td><td>Legittimo interesse (art. 6.1.f)</td></tr>
     <tr><td>Statistiche d'uso (Analytics)</td><td>Consenso (art. 6.1.a)</td></tr>
@@ -138,13 +139,16 @@
     <tr><td>Gestione degli abbonamenti Premium</td><td>Esecuzione del contratto (art. 6.1.b)</td></tr>
   </table>
 
-  <h2 id="posizione">4. La tua posizione (niente GPS)</h2>
-  <p>DanceMate ti mostra partner e annunci nella tua zona, ma è progettata per proteggere la tua posizione reale:</p>
+  <h2 id="posizione">4. La tua posizione (approssimata)</h2>
+  <p>DanceMate ti mostra partner e annunci nella tua zona proteggendo la tua posizione reale:</p>
   <ul>
-    <li><strong>Non leggiamo il GPS del telefono.</strong> La posizione usata per la mappa e per il calcolo della distanza deriva dalla <strong>città che dichiari</strong> nel profilo o nell'annuncio.</li>
-    <li>La città viene trasformata in coordinate approssimative tramite un servizio di geocodifica (OpenStreetMap / Nominatim): le coordinate corrispondono al <strong>centro della città</strong>, non a un indirizzo preciso.</li>
-    <li>Sulla mappa il segnaposto è <strong>volutamente leggermente spostato</strong> rispetto al centro città, così da non rivelare una posizione puntuale.</li>
-    <li>Puoi regolare la visibilità della tua posizione (impostazione "privacy posizione") o renderti non visibile.</li>
+    <li><strong>Usiamo la posizione approssimata del dispositivo</strong> (permesso Android "posizione approssimata"), <strong>solo quando l'app è in primo piano</strong> e solo se lo consenti.</li>
+    <li><strong>Non memorizziamo mai la posizione precisa.</strong> La coordinata viene <strong>arrotondata a circa 1&nbsp;km</strong> prima di essere salvata: identifica una zona, non un indirizzo.</li>
+    <li>La posizione approssimata serve a <strong>mostrarti sulla mappa</strong> e al <strong>calcolo della distanza</strong> nelle ricerche. Sulla mappa il segnaposto è <strong>ulteriormente spostato</strong> per non rivelare un punto esatto.</li>
+    <li>Agli altri utenti mostriamo solo una <strong>distanza approssimata</strong> e un segnaposto sfocato: <strong>non condividiamo le tue coordinate</strong>, né con altri utenti né con terze parti.</li>
+    <li>La <strong>città</strong> che scrivi nel profilo è solo un'<strong>etichetta</strong> informativa e <strong>non determina</strong> la tua posizione sulla mappa.</li>
+    <li>Se <strong>neghi o revochi</strong> il permesso non aggiorniamo la tua posizione e <strong>non comparirai</strong> nelle ricerche per distanza né sulla mappa (puoi comunque usare l'app). Puoi anche scegliere l'opzione <strong>"nascondi posizione"</strong>.</li>
+    <li>La posizione ha una <strong>scadenza</strong>: se non apri l'app per alcuni giorni (attualmente 7) viene considerata non aggiornata e smetti di comparire finché non riapri l'app.</li>
   </ul>
 
   <h2 id="visibilita">5. Cosa vedono gli altri utenti</h2>
@@ -207,4 +211,3 @@
 </main>
 </body>
 </html>
-
