@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Report content or behaviour — DanceMate</title>
+<meta name="robots" content="index,follow">
+<link rel="alternate" hreflang="it" href="./segnala.html">
+<link rel="alternate" hreflang="en" href="./segnala-en.html">
+<link rel="stylesheet" href="./legal.css">
+<script src="./legal.js" defer></script>
+</head>
+<body>
+<header class="band">
+  <nav class="lang" aria-label="Language">
+    <a href="./segnala.html" data-lang="it">IT</a>
+    <a href="./segnala-en.html" data-lang="en" aria-current="true">EN</a>
+  </nav>
+  <div class="wrap">
+    <div class="brand"><span class="note">&#9835;</span> DanceMate</div>
+    <h1>Report content or behaviour</h1>
+    <p>Open to anyone — no account and no app needed</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<div class="box urgent">
+  <strong>If someone is in immediate danger, call 112</strong> (the European emergency number)
+  or your local emergency number.<br>
+  This page is not an emergency channel: we read reports as soon as we can, but the mailbox is
+  not staffed around the clock.
+</div>
+
+<p>Use this page to report content or behaviour you believe is illegal or against DanceMate’s
+rules. This is the channel required by Article 16 of Regulation (EU) 2022/2065 on digital
+services, and it is open to everyone: no app, no account, no registration needed.</p>
+
+<div class="box">
+  <strong>Do you have the app and can you sign in?</strong><br>
+  Reporting from the app is faster and reaches us already linked to the right profile or ad:
+  open the profile or the ad, tap <strong>⋮</strong> and choose <strong>Report</strong>. This
+  page is for people who can’t do that.
+</div>
+
+<h2>What to tell us</h2>
+<p>The more precise the report, the sooner we can act. Please include:</p>
+<ol>
+  <li><strong>Who or what you are reporting</strong> — display name, email address or profile
+      link. If you don’t know, describe the person or the ad as best you can.</li>
+  <li><strong>What happened</strong> — when, where and how. One concrete fact is worth more
+      than an opinion.</li>
+  <li><strong>Why you believe it is illegal or against the rules.</strong></li>
+  <li><strong>Evidence you can show</strong> — just describe it (screenshots, messages,
+      witnesses). Don’t attach files to the first message: if we need them, we’ll ask.</li>
+  <li><strong>Your email address</strong> — we need it to confirm we received the report and to
+      tell you the outcome. We never show it to the person reported.</li>
+</ol>
+<p class="muted">By sending the report you declare that what you describe is true to the best
+of your knowledge. Reports made in bad faith can themselves lead to measures.</p>
+
+<a class="cta" id="mail" href="#">Write to us to report</a>
+<p class="alt">
+  The button opens your email program with the message already set up: you only have to fill
+  in the points.<br>
+  If it doesn’t work, write to <a id="plain" href="#">…</a>
+</p>
+
+<h2>What happens next</h2>
+<ol>
+  <li>We reply confirming that we received your report.</li>
+  <li>We assess it. If needed, we ask you for a few more details.</li>
+  <li>A person decides: automated tools may help us find content, but they don’t decide for
+      us.</li>
+  <li>We tell you the decision at the address you wrote from, together with the reasons.</li>
+  <li>If you disagree, you can reply to that same email asking for a review.</li>
+</ol>
+
+<div class="box">
+  <strong>Were you the one reported?</strong><br>
+  If you received a notice or a restriction and want to challenge it, you have
+  <strong>14 days</strong> from the decision: reply to the email we sent you, or write to us
+  from here quoting the case code shown in the notice. If you can no longer sign in, give us
+  the email address of your account. We look at it again and, if we got it wrong, we undo the
+  measure.
+</div>
+
+<footer>
+  We use what you send us only to assess the report and reply to you.
+  Read the <a href="./privacy-en.html">Privacy Policy</a> and the
+  <a href="./terms-en.html">Terms of Service</a>.<br><br>
+  DanceMate — Data controller: Paolo Marchionetti
+</footer>
+
+</div>
+</main>
+
+<script>
+// ⚠️ THE ONLY PLACE TO UPDATE if the support address changes.
+// Keep it aligned with _support_contact() in the database:
+//   select public.admin_set_support_contact('new@address.com', null);
+const SUPPORT_EMAIL = "paolo.marchionetti@gmail.com";
+
+const SUBJECT = "DanceMate report (Art. 16 DSA)";
+
+const BODY = [
+  "1) WHO OR WHAT I AM REPORTING",
+  "   (display name, email or profile link; if you don't know, describe it)",
+  "   ...",
+  "",
+  "2) WHAT HAPPENED",
+  "   (when, where, how)",
+  "   ...",
+  "",
+  "3) WHY I BELIEVE IT IS ILLEGAL OR AGAINST THE RULES",
+  "   ...",
+  "",
+  "4) EVIDENCE I CAN SHOW",
+  "   (describe it: screenshots, messages, witnesses. Don't attach files yet)",
+  "   ...",
+  "",
+  "5) MY CONTACT ADDRESS",
+  "   (the address I'm writing from is fine; give another one if you prefer)",
+  "   ...",
+  "",
+  "I declare that the above is true to the best of my knowledge.",
+  ""
+].join("\n");
+
+const link = "mailto:" + SUPPORT_EMAIL +
+             "?subject=" + encodeURIComponent(SUBJECT) +
+             "&body="    + encodeURIComponent(BODY);
+
+document.getElementById("mail").href = link;
+const plain = document.getElementById("plain");
+plain.href = "mailto:" + SUPPORT_EMAIL;
+plain.textContent = SUPPORT_EMAIL;
+</script>
+
+</body>
+</html>

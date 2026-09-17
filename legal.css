@@ -1,0 +1,89 @@
+/* ============================================================
+   FILE: legal.css — DanceMate, pagine pubbliche
+   N13 (13/09/2026)
+
+   Prima ogni pagina si portava dentro la propria copia dello stile: quattro
+   copie da tenere allineate a mano, e infatti non lo erano più. Da qui in poi
+   il foglio è uno solo, e le pagine sono otto (quattro in italiano, quattro in
+   inglese) che pesano poche righe ciascuna.
+   ============================================================ */
+
+:root{
+  --ink:#1c1b22; --muted:#5a5866; --line:#e7e5ee;
+  --viola:#5b30b0; --viola-soft:#f2ecfb; --verde:#2ec57e; --bg:#ffffff;
+  --err:#b3261e; --maxw:760px;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.62; font-size:17px;
+}
+
+/* ── intestazione ─────────────────────────────────────────── */
+.band{
+  background:linear-gradient(135deg,var(--verde) 0%,var(--viola) 120%);
+  color:#fff; padding:34px 20px 30px; position:relative;
+}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+.band .wrap{padding-left:0;padding-right:0}
+.brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.2px}
+.note{width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.18);
+  display:flex;align-items:center;justify-content:center;font-size:20px}
+h1{font-size:1.55rem; margin:18px 0 6px; line-height:1.2}
+.band p{margin:0; opacity:.92; font-size:.98rem}
+
+/* ── selettore di lingua ──────────────────────────────────── */
+.lang{position:absolute; top:14px; right:16px; display:flex; gap:6px; font-size:.86rem}
+.lang a{
+  color:#fff; text-decoration:none; padding:4px 10px; border-radius:999px;
+  border:1px solid rgba(255,255,255,.45); line-height:1.4;
+}
+.lang a[aria-current="true"]{background:rgba(255,255,255,.22); font-weight:700}
+
+/* ── testo ────────────────────────────────────────────────── */
+main{padding:34px 0 60px}
+h2{font-size:1.18rem; margin:34px 0 8px; color:var(--viola); line-height:1.3}
+h3{font-size:1.02rem; margin:20px 0 4px}
+p,li{color:var(--ink)}
+.muted{color:var(--muted); font-size:.92rem}
+a{color:var(--viola); text-decoration:underline; text-underline-offset:2px}
+ul{padding-left:20px; margin:8px 0}
+ol{padding-left:22px}
+li{margin:4px 0}
+table{width:100%; border-collapse:collapse; margin:10px 0; font-size:.93rem}
+th,td{text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top}
+th{color:var(--muted); font-weight:600}
+td.num{white-space:nowrap}
+.box{background:var(--viola-soft); border:1px solid #e4d8f7; border-radius:12px; padding:14px 16px; margin:14px 0}
+.box strong{color:var(--viola)}
+.urgent{background:#fdf2f1; border-color:#f3c2be}
+.urgent strong{color:var(--err)}
+.toc{background:#faf9fc; border:1px solid var(--line); border-radius:12px; padding:14px 18px; margin:8px 0 0}
+.toc ol{margin:6px 0 0; padding-left:22px}
+.toc a{text-decoration:none}
+hr{border:none;border-top:1px solid var(--line);margin:30px 0}
+
+/* ── indice del sito ──────────────────────────────────────── */
+a.card{display:block;border:1px solid var(--line);border-radius:14px;padding:18px 20px;
+  margin:14px 0;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:var(--viola)}
+a.card strong{color:var(--viola);font-size:1.08rem}
+a.card span{display:block;color:var(--muted);font-size:.92rem;margin-top:4px}
+
+/* ── pulsante ─────────────────────────────────────────────── */
+.cta{display:block; text-align:center; text-decoration:none; margin:26px 0 10px;
+  padding:16px; border-radius:12px; background:var(--viola); color:#fff;
+  font-size:1.05rem; font-weight:700}
+.cta:hover{opacity:.92}
+.alt{text-align:center; color:var(--muted); font-size:.92rem; margin-top:6px}
+
+footer{border-top:1px solid var(--line); padding:22px 0 50px; color:var(--muted); font-size:.9rem}
+
+@media print{
+  .band{background:none;color:#000;padding:0 0 10px}
+  .lang,.cta{display:none}
+  body{font-size:12pt}
+}
