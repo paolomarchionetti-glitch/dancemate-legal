@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Segnala un contenuto o un comportamento — DanceMate</title>
+<meta name="robots" content="index,follow">
+<link rel="alternate" hreflang="en" href="./segnala-en.html">
+<link rel="alternate" hreflang="it" href="./segnala.html">
+<link rel="stylesheet" href="./legal.css">
+<script src="./legal.js" defer></script>
+</head>
+<body>
+<header class="band">
+  <nav class="lang" aria-label="Lingua">
+    <a href="./segnala.html" data-lang="it" aria-current="true">IT</a>
+    <a href="./segnala-en.html" data-lang="en">EN</a>
+  </nav>
+  <div class="wrap">
+    <div class="brand"><span class="note">&#9835;</span> DanceMate</div>
+    <h1>Segnala un contenuto o un comportamento</h1>
+    <p>Aperto a chiunque, anche senza account e senza l'app</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<div class="box urgent">
+  <strong>Se una persona è in pericolo immediato, chiama il 112.</strong><br>
+  Questa pagina non è un canale di emergenza: leggiamo le segnalazioni il prima possibile, ma
+  la casella non è presidiata 24 ore su 24.
+</div>
+
+<p>Da qui puoi segnalare contenuti o comportamenti che ritieni illegali o contrari alle regole
+di DanceMate. È il canale previsto dall'articolo 16 del Regolamento (UE) 2022/2065 sui servizi
+digitali, ed è aperto a tutti: non serve avere l'app, né un account, né essere iscritti.</p>
+
+<div class="box">
+  <strong>Hai già l'app e riesci ad accedere?</strong><br>
+  Segnalare dall'app è più rapido e ci arriva già collegato al profilo o all'annuncio giusto:
+  apri il profilo o l'annuncio, tocca <strong>⋮</strong> e scegli <strong>Segnala</strong>.
+  Questa pagina serve a chi quella strada non ce l'ha.
+</div>
+
+<h2>Cosa scriverci</h2>
+<p>Più la segnalazione è precisa, prima possiamo agire. Ti chiediamo di indicare:</p>
+<ol>
+  <li><strong>Chi o cosa stai segnalando</strong> — nome visualizzato, indirizzo email o link
+      del profilo. Se non lo sai, descrivi la persona o l'annuncio come puoi.</li>
+  <li><strong>Cosa è successo</strong> — quando, dove e in che modo. Un fatto concreto vale più
+      di un giudizio.</li>
+  <li><strong>Perché ritieni che sia illegale o contrario alle regole.</strong></li>
+  <li><strong>Prove che puoi mostrare</strong> — descrivile soltanto (screenshot, messaggi,
+      testimoni). Non allegare file al primo messaggio: se ci servono, te li chiediamo noi.</li>
+  <li><strong>Un tuo recapito email</strong> — ci serve per confermarti che abbiamo ricevuto la
+      segnalazione e per dirti come è andata a finire. Non lo mostriamo mai alla persona
+      segnalata.</li>
+</ol>
+<p class="muted">Inviando la segnalazione dichiari che quanto riporti è vero per quanto ne
+sai. Le segnalazioni fatte in malafede possono a loro volta portare a provvedimenti.</p>
+
+<a class="cta" id="mail" href="#">Scrivici per segnalare</a>
+<p class="alt">
+  Il pulsante apre il tuo programma di posta con il messaggio già impostato: devi solo
+  riempire i punti.<br>
+  Se non funziona, scrivi a <a id="plain" href="#">…</a>
+</p>
+
+<h2>Cosa succede dopo</h2>
+<ol>
+  <li>Ti rispondiamo confermando di aver ricevuto la segnalazione.</li>
+  <li>La valutiamo. Se serve, ti chiediamo qualche dettaglio in più.</li>
+  <li>Decide una persona: gli strumenti automatici possono aiutarci a individuare un
+      contenuto, ma non decidono al posto nostro.</li>
+  <li>Ti comunichiamo la decisione all'indirizzo da cui ci hai scritto, insieme alle
+      ragioni.</li>
+  <li>Se non sei d'accordo, puoi rispondere a quella stessa email chiedendo un riesame.</li>
+</ol>
+
+<div class="box">
+  <strong>Sei tu a essere stato segnalato?</strong><br>
+  Se hai ricevuto un avviso o una limitazione e vuoi contestarla, hai <strong>30 giorni</strong>
+  dalla decisione: rispondi all'email che ti abbiamo inviato, oppure scrivici da qui citando il
+  codice del caso che trovi nell'avviso. Se non riesci più ad accedere all'app, indica
+  l'indirizzo email del tuo account. Riesaminiamo e, se abbiamo sbagliato, annulliamo il
+  provvedimento.
+</div>
+
+<footer>
+  I dati che ci invii li usiamo soltanto per valutare la segnalazione e risponderti.
+  Leggi l'<a href="./privacy.html">Informativa sulla Privacy</a> e i
+  <a href="./terms.html">Termini di Servizio</a>.<br><br>
+  DanceMate — Titolare del trattamento: Paolo Marchionetti
+</footer>
+
+</div>
+</main>
+
+<script>
+// ⚠️ UNICO PUNTO DA AGGIORNARE se cambi indirizzo di assistenza.
+// Va tenuto allineato a _support_contact() nel database:
+//   select public.admin_set_support_contact('nuovo@indirizzo.it', null);
+const SUPPORT_EMAIL = "paolo.marchionetti@gmail.com";
+
+const OGGETTO = "Segnalazione DanceMate (art. 16 DSA)";
+
+const CORPO = [
+  "1) CHI O COSA SEGNALO",
+  "   (nome visualizzato, email o link del profilo; se non lo sai, descrivilo)",
+  "   ...",
+  "",
+  "2) COSA E' SUCCESSO",
+  "   (quando, dove, in che modo)",
+  "   ...",
+  "",
+  "3) PERCHE' RITENGO CHE SIA ILLEGALE O CONTRARIO ALLE REGOLE",
+  "   ...",
+  "",
+  "4) PROVE CHE POSSO MOSTRARE",
+  "   (descrivile: screenshot, messaggi, testimoni. Non allegare file adesso)",
+  "   ...",
+  "",
+  "5) IL MIO RECAPITO",
+  "   (l'indirizzo da cui scrivo va bene; indicane un altro se preferisci)",
+  "   ...",
+  "",
+  "Dichiaro che quanto riportato e' vero per quanto ne so.",
+  ""
+].join("\n");
+
+const link = "mailto:" + SUPPORT_EMAIL +
+             "?subject=" + encodeURIComponent(OGGETTO) +
+             "&body="    + encodeURIComponent(CORPO);
+
+document.getElementById("mail").href = link;
+const plain = document.getElementById("plain");
+plain.href = "mailto:" + SUPPORT_EMAIL;
+plain.textContent = SUPPORT_EMAIL;
+</script>
+
+</body>
+</html>
