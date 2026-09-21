@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Report content or behaviour — DanceMate</title>
+<meta name="robots" content="index,follow">
+<link rel="alternate" hreflang="en" href="./segnala-en.html">
+<link rel="alternate" hreflang="it" href="./segnala.html">
+<link rel="stylesheet" href="./legal.css">
+<script src="./legal.js" defer></script>
+</head>
+<body>
+<header class="band">
+  <nav class="lang" aria-label="Language">
+    <a href="./segnala.html" data-lang="it">IT</a>
+    <a href="./segnala-en.html" data-lang="en" aria-current="true">EN</a>
+  </nav>
+  <div class="wrap">
+    <div class="brand"><span class="note">&#9835;</span> DanceMate</div>
+    <h1>Report content or behaviour</h1>
+    <p>Open to anyone, even without an account or the app</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<div class="box urgent">
+  <strong>If someone is in immediate danger, call 112.</strong><br>
+  This page is not an emergency channel: we read reports as soon as we can, but the inbox is not
+  monitored 24 hours a day.
+</div>
+
+<p>Here you can report content or behaviour you believe is <strong>illegal</strong> or against
+<a href="./terms-en.html#conduct">DanceMate's Terms</a>. This is the notice mechanism provided for
+in Article 16 of Regulation (EU) 2022/2065 on digital services (“Digital Services Act”), and it is
+open to everyone: you do not need the app or an account.</p>
+
+<div class="box">
+  <strong>Do you already have the app and can sign in?</strong><br>
+  Reporting from the app is quicker and reaches us already linked to the right profile or listing:
+  open the profile or listing, tap <strong>⋮</strong> and choose <strong>Report</strong>. This page
+  is for people who don't have that option.
+</div>
+
+<h2>What to tell us</h2>
+<p>The more precise the report, the sooner we can act. The Digital Services Act asks that a notice
+contain these elements:</p>
+<ol>
+  <li><strong>Where the content is</strong> — display name and city of the profile, title of the
+      listing, and anything else that helps find it without doubt. If you have a screenshot,
+      describe what it shows.</li>
+  <li><strong>What happened</strong> — when, where and how. A concrete fact is worth more than a
+      judgement.</li>
+  <li><strong>Why you believe it is illegal or against the rules</strong> — if you have a specific
+      law in mind, quote it; otherwise explain in your own words.</li>
+  <li><strong>Your name and email address</strong> — we need them to acknowledge receipt and tell
+      you our decision. <strong>We do not reveal them to the reported person.</strong></li>
+  <li><strong>A statement of good faith</strong> — that what you write is, to the best of your
+      knowledge, accurate and complete. It is already included in the pre-filled message.</li>
+</ol>
+<p class="muted">For content involving <strong>child sexual abuse</strong> you can report without
+giving your name and email. In that case also report it to the police (in Italy, the
+<a href="https://www.commissariatodips.it">Polizia Postale</a>). Never send us a copy of those
+images: describe them only.</p>
+<p class="muted">Do not attach files to the first message: if we need them, we will ask you. Reports
+made in bad faith, or manifestly unfounded and repeated, may lead to us no longer processing
+reports from the sender for a period (Article 23 DSA).</p>
+
+<a class="cta" id="mail" href="#">Write to us to report</a>
+<p class="alt">
+  The button opens your email app with the message already set up: you just fill in the points.<br>
+  If it doesn't work, write to <a id="plain" href="#">…</a>
+</p>
+
+<h2>What happens next</h2>
+<ol>
+  <li>We confirm that we received your report.</li>
+  <li>We assess it diligently and objectively. If needed, we ask you for more details.</li>
+  <li>A person decides: automated tools can help us find content, but they don't decide for us.</li>
+  <li>We send you our decision, with reasons, at the address you wrote from.</li>
+  <li>If you disagree, you can reply to that same email within 30 days asking for a review, free of
+      charge, which a person will carry out again.</li>
+  <li>You can also turn to an out-of-court dispute settlement body certified under Article 21 DSA,
+      lodge a complaint with AGCOM, the Italian Digital Services Coordinator
+      (<a href="https://www.agcom.it">agcom.it</a>), or go to court.</li>
+</ol>
+
+<div class="box">
+  <strong>Were you the one reported?</strong><br>
+  If you received a notice or a restriction and want to challenge it, you have <strong>30
+  days</strong> from the decision: reply to the email we sent you, or write to us quoting the case
+  code you find in the notice. If you can no longer sign in to the app, give the email address of
+  your account. The review is done by a person and, if we were wrong, we cancel the measure.
+</div>
+
+<h2>Authorities and copyright</h2>
+<p><strong>Judicial and administrative authorities</strong> can send orders and requests for
+information (Articles 9 and 10 DSA) to the same address, which is our single point of contact
+(Article 11 DSA), in Italian or English. Anyone who believes content infringes their
+<strong>copyright, image rights or trademark</strong> can use this same page, stating the right
+infringed and showing that they hold it or act on behalf of the holder.</p>
+
+<footer>
+  We only use the data you send us to assess the report, reply to you and, where the law requires,
+  inform the authorities. We keep it for 24 months from the closing of the case.
+  Read the <a href="./privacy-en.html">Privacy Policy</a> and the
+  <a href="./terms-en.html">Terms of Service</a>.<br><br>
+  DanceMate — Paolo Marchionetti · <a href="./index-en.html">Legal documents</a>
+</footer>
+
+</div>
+</main>
+
+<script>
+// ⚠️ THE ONLY PLACE TO UPDATE if the support address changes.
+// Keep it aligned with _support_contact() in the database:
+//   select public.admin_set_support_contact('new@address.com', null);
+const SUPPORT_EMAIL = "paolo.marchionetti@gmail.com";
+
+const SUBJECT = "DanceMate report (Art. 16 DSA)";
+
+const BODY = [
+  "1) WHERE THE CONTENT IS",
+  "   (display name and city of the profile, listing title, other details)",
+  "   ...",
+  "",
+  "2) WHAT HAPPENED",
+  "   (when, where, how)",
+  "   ...",
+  "",
+  "3) WHY I BELIEVE IT IS ILLEGAL OR AGAINST THE RULES",
+  "   ...",
+  "",
+  "4) EVIDENCE I CAN SHOW",
+  "   (describe it: screenshots, messages, witnesses. Don't attach files now)",
+  "   ...",
+  "",
+  "5) NAME AND CONTACT",
+  "   Name: ...",
+  "   Email: (the one I'm writing from is fine; give another if you prefer)",
+  "",
+  "I declare in good faith that the information and allegations in this",
+  "report are, to the best of my knowledge, accurate and complete.",
+  ""
+].join("\n");
+
+const link = "mailto:" + SUPPORT_EMAIL +
+             "?subject=" + encodeURIComponent(SUBJECT) +
+             "&body="    + encodeURIComponent(BODY);
+
+document.getElementById("mail").href = link;
+const plain = document.getElementById("plain");
+plain.href = "mailto:" + SUPPORT_EMAIL;
+plain.textContent = SUPPORT_EMAIL;
+</script>
+
+</body>
+</html>
