@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guida completa — {{NOME_APP}}</title>
+<meta name="description" content="Tutto quello che puoi fare con {{NOME_APP}}, spiegato passo passo con esempi: profilo, annunci, ricerca, mappa, contatti, sicurezza, Premium.">
+<meta name="robots" content="index,follow">
+<link rel="alternate" hreflang="en" href="./guida-en.html">
+<link rel="alternate" hreflang="it" href="./guida.html">
+<link rel="stylesheet" href="./legal.css">
+<script src="./legal.js" defer></script>
+<style>
+  /* Solo per la guida: esempi, etichette, segnaposto delle schermate */
+  .es{border-left:4px solid var(--verde);background:#f3fbf7;border-radius:0 12px 12px 0;padding:12px 16px;margin:14px 0}
+  .es::before{content:"Esempio";display:block;font-weight:700;color:#1d8a57;font-size:.85rem;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
+  .tip{border-left:4px solid var(--viola);background:var(--viola-soft);border-radius:0 12px 12px 0;padding:12px 16px;margin:14px 0}
+  .tip::before{content:"Consiglio";display:block;font-weight:700;color:var(--viola);font-size:.85rem;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
+  .warn{border-left:4px solid var(--err);background:#fdf2f1;border-radius:0 12px 12px 0;padding:12px 16px;margin:14px 0}
+  .warn::before{content:"Attenzione";display:block;font-weight:700;color:var(--err);font-size:.85rem;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
+  .shot{border:2px dashed #cfc8de;border-radius:12px;padding:14px;margin:14px 0;color:var(--muted);font-size:.9rem;text-align:center;background:#fcfbfe}
+  .shot::before{content:"📷 ";}
+  .tag{display:inline-block;font-size:.76rem;font-weight:700;border-radius:999px;padding:1px 9px;vertical-align:middle;margin-left:4px}
+  .free{background:#e7f7ef;color:#1d8a57}
+  .prem{background:#fff3c4;color:#8a6500}
+  .ui{font-weight:600;color:var(--viola)}
+  h3{font-size:1.02rem;margin:24px 0 6px}
+  ol.steps>li{margin:6px 0}
+  .toc ol ol{margin:2px 0 4px}
+  .back{font-size:.85rem;text-decoration:none}
+  details{border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:10px 0}
+  details summary{cursor:pointer;font-weight:600}
+</style>
+</head>
+<body>
+<header class="band">
+  <nav class="lang" aria-label="Lingua">
+    <a href="./guida.html" data-lang="it" aria-current="true">IT</a>
+    <a href="./guida-en.html" data-lang="en">EN</a>
+  </nav>
+  <div class="wrap">
+    <div class="brand"><span class="note">&#9835;</span> {{NOME_APP}}</div>
+    <h1>Guida completa all'app</h1>
+    <p>Ogni schermata, ogni opzione, con esempi. Aggiornata al 27/09/2026.</p>
+  </div>
+</header>
+<main>
+<div class="wrap">
+
+<p>Questa guida spiega <strong>tutto</strong> quello che puoi fare con {{NOME_APP}}: dalla registrazione alla ricerca di un partner, dagli annunci alla mappa, dai contatti alla sicurezza. Puoi leggerla dall'inizio alla fine, oppure saltare alla sezione che ti serve dall'indice. Dentro l'app la trovi in <span class="ui">Impostazioni → Guida completa</span>.</p>
+
+<p>Le funzioni segnate <span class="tag free">Gratis</span> sono per tutti; quelle segnate <span class="tag prem">Premium</span> richiedono l'abbonamento, i Punti Sicurezza o la promo di lancio (vedi <a href="#premium">Premium</a>).</p>
+
+<nav class="toc" aria-label="Indice">
+<strong>Indice</strong>
+<ol>
+  <li><a href="#inizio">Prima di cominciare</a></li>
+  <li><a href="#accesso">Registrazione e accesso</a></li>
+  <li><a href="#navigazione">Come è fatta l'app</a></li>
+  <li><a href="#profilo">Il tuo profilo</a></li>
+  <li><a href="#modifica-profilo">Modificare il profilo, campo per campo</a></li>
+  <li><a href="#posizione">La posizione: come funziona e cosa vedono gli altri</a></li>
+  <li><a href="#home">Home: la bacheca degli annunci</a></li>
+  <li><a href="#annuncio">Il dettaglio di un annuncio</a></li>
+  <li><a href="#nuovo-annuncio">Pubblicare un annuncio</a></li>
+  <li><a href="#miei-annunci">I miei annunci: stati e azioni</a></li>
+  <li><a href="#cerca">Cercare un partner</a></li>
+  <li><a href="#mappa">La mappa</a></li>
+  <li><a href="#interessi">Interessi: il primo passo</a></li>
+  <li><a href="#contatti">Contatti: chi vede cosa</a></li>
+  <li><a href="#piace">Mi piace, visite e valutazioni</a></li>
+  <li><a href="#sicurezza">Bloccare e segnalare</a></li>
+  <li><a href="#provvedimenti">Dopo una segnalazione: provvedimenti e riesame</a></li>
+  <li><a href="#punti">Punti Sicurezza</a></li>
+  <li><a href="#verifica">Verifica del profilo (badge ✓)</a></li>
+  <li><a href="#premium">Premium, promo e boost</a></li>
+  <li><a href="#notifiche">Notifiche</a></li>
+  <li><a href="#impostazioni">Impostazioni, voce per voce</a></li>
+  <li><a href="#account">I tuoi dati e il tuo account</a></li>
+  <li><a href="#faq">Domande frequenti</a></li>
+  <li><a href="#glossario">Glossario</a></li>
+</ol>
+</nav>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="inizio">1. Prima di cominciare</h2>
+
+<p>{{NOME_APP}} serve a <strong>trovare persone con cui ballare</strong>: un partner da gara, un compagno per le serate, qualcuno con cui frequentare un corso, allievi o insegnanti. Funziona in tre modi, che puoi usare insieme:</p>
+<ul>
+  <li><strong>Annunci</strong>: scrivi cosa cerchi («Cerco partner di bachata per le serate a Rimini») e aspetti chi ti risponde.</li>
+  <li><strong>Ricerca</strong>: sei tu a cercare le persone, filtrando per stile, livello, distanza e molto altro.</li>
+  <li><strong>Mappa</strong>: vedi chi balla e chi cerca intorno a te, o in un'altra città.</li>
+</ul>
+<p>Il contatto avviene in modo protetto: prima mandi un <strong>interesse</strong>; se l'altra persona accetta, è lei a decidere quali contatti mostrarti (WhatsApp, Instagram, email…). Nessuno vede il tuo numero se tu non lo vuoi.</p>
+
+<h3>Requisiti</h3>
+<ul>
+  <li>Devi avere <strong>almeno 18 anni</strong>.</li>
+  <li>Serve uno smartphone Android (la versione per iPhone arriverà più avanti).</li>
+  <li>L'app è in <strong>italiano</strong> e in <strong>inglese</strong>; puoi cambiare lingua quando vuoi.</li>
+</ul>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="accesso">2. Registrazione e accesso</h2>
+
+<p>Alla prima apertura vedi tre schermate di presentazione (<span class="ui">Avanti</span> per scorrerle, <span class="ui">Salta</span> per andare subito all'accesso). Poi puoi entrare in due modi.</p>
+
+<h3>2.1 Con email e password</h3>
+<ol class="steps">
+  <li>Tocca <span class="ui">Registrati</span>.</li>
+  <li>Compila i campi:
+    <table>
+      <tr><th>Campo</th><th>Regole</th></tr>
+      <tr><td><strong>Nome pubblico</strong></td><td>Il nome che vedono gli altri. Da 2 a 60 caratteri. Puoi usare il nome di battesimo, un soprannome o il nome della tua scuola.</td></tr>
+      <tr><td><strong>Email</strong></td><td>Un indirizzo vero: ti arriverà un link di verifica. Le email «usa e getta» non sono accettate.</td></tr>
+      <tr><td><strong>Password</strong></td><td>Almeno 6 caratteri, con almeno un numero.</td></tr>
+      <tr><td><strong>Conferma password</strong></td><td>La stessa, per evitare errori di battitura.</td></tr>
+      <tr><td><strong>Data di nascita</strong></td><td>Serve a verificare i 18 anni e a calcolare l'età mostrata agli altri. La data esatta non viene mostrata a nessuno.</td></tr>
+      <tr><td><strong>Genere</strong></td><td>Uomo, Donna, Altro o Non specificato. Serve ai filtri di ricerca.</td></tr>
+    </table>
+  </li>
+  <li>Leggi e accetta i <strong>Termini di servizio</strong> (il collegamento è sotto il pulsante).</li>
+  <li>Tocca <span class="ui">Crea account</span>.</li>
+  <li><strong>Verifica l'email</strong>: apri la posta, tocca il link che ti abbiamo mandato, torna nell'app e premi <span class="ui">Ho verificato</span>. Se non trovi l'email, controlla lo <strong>spam</strong>, oppure tocca <span class="ui">Reinvia email</span>.</li>
+</ol>
+
+<h3>2.2 Con Google</h3>
+<p>Tocca <span class="ui">Continua con Google</span> e scegli il tuo account. La prima volta ti chiediamo solo due cose, nella schermata <span class="ui">Completa il profilo</span>: la <strong>data di nascita</strong> e il <strong>consenso</strong> a Termini e Privacy. Con Google non serve verificare l'email.</p>
+
+<h3>2.3 Password dimenticata</h3>
+<p>Nella schermata di accesso tocca <span class="ui">Password dimenticata?</span>, scrivi la tua email e premi <span class="ui">Invia link di recupero</span>. Ti arriva un'email con un link per sceglierne una nuova.</p>
+
+<div class="tip">Se non riesci ad accedere, in fondo alla schermata di accesso c'è il collegamento <span class="ui">Non riesci ad accedere o devi segnalare qualcosa? Scrivici</span>: prepara un'email già indirizzata all'assistenza.</div>
+
+<div class="shot">Schermata: registrazione con i campi compilati</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="navigazione">3. Come è fatta l'app</h2>
+
+<p>In basso c'è sempre la barra con cinque voci:</p>
+<table>
+  <tr><th>Voce</th><th>Cosa trovi</th></tr>
+  <tr><td><strong>Home</strong></td><td>La bacheca degli annunci di chi cerca un partner. <a href="#home">→</a></td></tr>
+  <tr><td><strong>Cerca</strong></td><td>La ricerca delle persone con i filtri. <a href="#cerca">→</a></td></tr>
+  <tr><td><strong>Mappa</strong></td><td>Annunci e persone sulla mappa. <a href="#mappa">→</a></td></tr>
+  <tr><td><strong>I miei</strong></td><td>I tuoi annunci: crearli, rinnovarli, metterli in evidenza. <a href="#miei-annunci">→</a></td></tr>
+  <tr><td><strong>Profilo</strong></td><td>Il tuo profilo, i tuoi contatti, e da lì le Impostazioni (ingranaggio in alto). <a href="#profilo">→</a></td></tr>
+</table>
+
+<p>In cima alle <span class="ui">Impostazioni</span> trovi la scheda <span class="ui">Come funziona {{NOME_APP}}</span>: otto pagine brevi con l'essenziale. Questa guida è la versione completa.</p>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="profilo">4. Il tuo profilo</h2>
+
+<p>Tocca <span class="ui">Profilo</span> nella barra in basso. Vedi il tuo profilo esattamente come lo vedono gli altri, più alcune cose che vedi solo tu.</p>
+
+<h3>4.1 Cosa vedono tutti</h3>
+<ul>
+  <li><strong>Foto principale</strong> e <strong>galleria</strong>.</li>
+  <li><strong>Nome pubblico</strong>, <strong>età</strong>, <strong>città</strong> (secondo la <a href="#posizione">precisione della posizione</a> che hai scelto).</li>
+  <li><strong>Stili di ballo</strong> con il livello per ciascuno, <strong>obiettivo</strong>, <strong>cosa cerchi</strong>, <strong>altezza</strong>, <strong>bio</strong>.</li>
+  <li><strong>Video</strong> <span class="tag prem">Premium</span>.</li>
+  <li>La <strong>valutazione media</strong> in stelle, il numero di <strong>Mi piace</strong>, i tuoi <strong>annunci attivi</strong>.</li>
+  <li>Eventuali badge: <strong>✓ verificato</strong>, <strong>Premium</strong>, <strong>In evidenza</strong>, <strong>livello contatti</strong> (Connesso / Ben connesso / Molto connesso, in base a quante persone ti hanno dato i loro contatti: da 1, da 5, da 10).</li>
+  <li>Il badge <strong>Posizione aggiornata</strong> o <strong>Posizione non aggiornata</strong>.</li>
+</ul>
+
+<h3>4.2 Cosa vedi solo tu</h3>
+<ul>
+  <li><strong>Profilo completato al …%</strong>: più è alto, più compari e più contatti ricevi. Il giudizio va da «Profilo incompleto» a «Profilo eccellente!».</li>
+  <li><strong>Chi ti ha visto</strong>: <span class="tag free">Gratis</span> vedi quante persone; <span class="tag prem">Premium</span> vedi chi sono.</li>
+  <li><strong>Chi ti ha messo Mi piace</strong>: stessa regola.</li>
+  <li>Il pulsante <span class="ui">I miei contatti</span> (gli <a href="#interessi">interessi</a> ricevuti e inviati) e <span class="ui">Modifica profilo</span>.</li>
+  <li>In alto: il selettore della <strong>lingua</strong>, il razzo per mettere <strong>in evidenza il profilo</strong> <span class="tag prem">Premium</span> (24 ore in cima alle ricerche) e l'<strong>ingranaggio</strong> delle Impostazioni.</li>
+</ul>
+
+<div class="warn">Se vedi «Posizione non aggiornata: non compari nelle ricerche per distanza né sulla mappa», apri l'app con la posizione del telefono attiva e il permesso concesso. Vedi <a href="#posizione">La posizione</a>.</div>
+
+<div class="shot">Schermata: il proprio profilo con percentuale di completamento e «Chi ti ha visto»</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="modifica-profilo">5. Modificare il profilo, campo per campo</h2>
+
+<p>Dal profilo tocca <span class="ui">Modifica profilo</span>. Alla fine premi <span class="ui">Salva modifiche</span> (o <span class="ui">Salva</span> in alto): vedrai «Profilo salvato!».</p>
+
+<h3>5.1 Foto profilo</h3>
+<p>Tocca <span class="ui">Cambia foto</span> e scegli un'immagine dal telefono. Ogni foto nuova viene <strong>controllata prima di essere pubblicata</strong>: finché è in revisione vedi «Foto profilo in revisione: sarà visibile dopo l'approvazione».</p>
+<div class="tip">Una foto in cui si vede bene il viso, magari mentre balli, fa la differenza. Senza foto non puoi vedere i contatti degli altri.</div>
+
+<h3>5.2 Galleria foto</h3>
+<ul>
+  <li><span class="tag free">Gratis</span> 1 foto in galleria · <span class="tag prem">Premium</span> fino a 10.</li>
+  <li>Tieni premuta o tocca una foto per <span class="ui">Imposta come principale</span>: diventa la foto del profilo.</li>
+  <li>Anche le foto della galleria passano la revisione.</li>
+  <li>Se torni Free con più di una foto, le altre <strong>restano salvate</strong> ma non si vedono: tornano visibili se ridiventi Premium.</li>
+</ul>
+
+<h3>5.3 Informazioni personali</h3>
+<table>
+  <tr><th>Campo</th><th>Cosa scrivere</th></tr>
+  <tr><td><strong>Nome pubblico</strong></td><td>Obbligatorio, 2–60 caratteri.</td></tr>
+  <tr><td><strong>Bio</strong></td><td>Fino a 500 caratteri. Racconta come balli, da quanto, cosa cerchi. <strong>Non mettere numeri di telefono, email o link</strong>: il testo andrebbe in revisione (i contatti hanno una sezione apposita, vedi 5.8).</td></tr>
+  <tr><td><strong>Città</strong></td><td>Inizia a scrivere: dal secondo carattere compaiono i suggerimenti, con provincia e regione. Scegline uno: la provincia si compila da sola. Ci sono tutti i comuni italiani e le città del mondo sopra i 15.000 abitanti. La città è un'<strong>etichetta</strong>: non ti sposta sulla mappa (vedi <a href="#posizione">La posizione</a>).</td></tr>
+  <tr><td><strong>Altezza</strong></td><td>In centimetri, da 100 a 230. Facoltativa, ma nel ballo di coppia conta.</td></tr>
+</table>
+<div class="es">Scrivi <code>fa</code> nel campo Città: compaiono «Fano — Pesaro e Urbino, Marche», «Faenza — Ravenna, Emilia-Romagna»… Per le città estere vedi anche il paese: scrivendo «parigi» trovi «Paris — Île-de-France, Francia».</div>
+
+<h3>5.4 Genere, obiettivo, cosa cerco</h3>
+<table>
+  <tr><th>Sezione</th><th>Opzioni</th></tr>
+  <tr><td><strong>Genere</strong></td><td>Uomo · Donna · Altro · Non specificato</td></tr>
+  <tr><td><strong>Obiettivo</strong> (perché balli)</td><td>Amatoriale · Agonistico · Professionale · Insegnante · Scuola di Danza</td></tr>
+  <tr><td><strong>Cosa cerco</strong></td><td>Partner da gara · Compagno di serata · Partner per corso · Allievo/a · Insegnante · Partner esibizione</td></tr>
+</table>
+
+<h3>5.5 Stili di ballo e livello</h3>
+<ol class="steps">
+  <li>Tocca <span class="ui">Aggiungi il tuo primo stile di ballo</span> (poi <span class="ui">Aggiungi altro stile</span>).</li>
+  <li>Scegli lo stile tra più di 60, in ordine alfabetico: da Bachata a Zouk, passando per Liscio, Tango Argentino, Danze Standard e Latine, Swing, Hip Hop e molti altri. Se il tuo non c'è, scegli <strong>Altro</strong>.</li>
+  <li>Per ogni stile scegli il <strong>livello</strong>: Principiante · Base · Intermedio · Avanzato · Classe D · Classe C · Classe B · Classe A · Classe S · Professionista. Le classi sono quelle delle gare federali; se non gareggi usa i livelli da Principiante ad Avanzato.</li>
+  <li>Con le frecce <span class="ui">Sposta su</span> / <span class="ui">Sposta giù</span> decidi l'<strong>ordine</strong>: i primi compaiono per primi nelle schede.</li>
+</ol>
+<ul>
+  <li><span class="tag free">Gratis</span> fino a 3 stili · <span class="tag prem">Premium</span> illimitati.</li>
+  <li>Se hai più di 3 stili e torni Free, <strong>i primi 3 restano visibili</strong>: mettici i più importanti.</li>
+</ul>
+<div class="es">Giulia balla bachata da anni, salsa da poco e vorrebbe iniziare il tango. Inserisce: <em>Bachata — Avanzato</em>, <em>Salsa — Base</em>, <em>Tango Argentino — Principiante</em>. Chi cerca «bachata avanzata» la trova subito, e un maestro di tango sa che è agli inizi.</div>
+
+<h3>5.6 Video <span class="tag prem">Premium</span></h3>
+<ul>
+  <li>Fino a <strong>5 video</strong>, con un link da <strong>YouTube, Facebook, Instagram o TikTok</strong> (altri siti non sono accettati).</li>
+  <li>Per ciascuno una <strong>descrizione</strong> di massimo 40 caratteri (es. «Finale regionale 2025»), modificabile con <span class="ui">Modifica descrizione</span>.</li>
+  <li>Gli altri li aprono con <span class="ui">Apri</span>; tu puoi toglierli con <span class="ui">Rimuovi</span>.</li>
+  <li>Nella ricerca c'è il filtro <strong>Con video</strong>: un video ti rende più facile da scegliere.</li>
+</ul>
+
+<h3>5.7 Galleria, video e Premium scaduto</h3>
+<p>Quando il Premium finisce non perdi niente: foto oltre la prima, video e stili oltre il terzo restano salvati e tornano visibili se riattivi Premium.</p>
+
+<h3>5.8 Contatti pubblici</h3>
+<p>Qui scrivi i contatti che <strong>potrai</strong> condividere. Compilare un campo <strong>non lo rende visibile</strong>: chi lo vede lo decidi con la sezione 5.9. Lascia vuoto quello che non vuoi usare.</p>
+<table>
+  <tr><th>Campo</th><th>Formato</th></tr>
+  <tr><td><strong>WhatsApp</strong></td><td>Scegli il prefisso del paese e scrivi il numero, solo cifre (es. prefisso +39, numero 3331234567).</td></tr>
+  <tr><td><strong>Instagram</strong></td><td>Il nome utente senza @ (lettere, numeri, punto e trattino basso, massimo 30).</td></tr>
+  <tr><td><strong>TikTok</strong></td><td>Il nome utente senza @ (da 2 a 24 caratteri).</td></tr>
+  <tr><td><strong>Email pubblica</strong></td><td>Può essere diversa da quella con cui accedi.</td></tr>
+  <tr><td><strong>Sito web</strong></td><td>Deve iniziare con <code>https://</code> (es. il sito della tua scuola).</td></tr>
+</table>
+<div class="warn">Per <strong>pubblicare un annuncio</strong> serve almeno un contatto compilato qui: altrimenti chi ti risponde non avrebbe modo di raggiungerti.</div>
+
+<h3>5.9 Chi può vedere i miei contatti</h3>
+<table>
+  <tr><th>Opzione</th><th>Cosa succede</th></tr>
+  <tr><td><strong>Tutti</strong></td><td>Scegli <strong>quali canali</strong> rendere pubblici (es. solo Instagram): quelli li vede chiunque sia registrato, senza bisogno di interesse. Gli altri restano privati e li condividi caso per caso.</td></tr>
+  <tr><td><strong>Solo dopo interesse accettato</strong> <em>(consigliata)</em></td><td>Nessuno vede niente finché non accetti il suo interesse; al momento di accettare scegli quali canali mostrare a quella persona.</td></tr>
+  <tr><td><strong>Solo utenti Premium con interesse accettato</strong></td><td>Come sopra, ma solo chi è Premium vede i contatti che condividi. Se accetti un utente Free, te lo segnaliamo prima.</td></tr>
+  <tr><td><strong>Nessuno</strong></td><td>I tuoi contatti restano sempre nascosti. Puoi comunque ricevere interessi e connetterti.</td></tr>
+</table>
+<div class="es">Marco insegna salsa e vuole farsi trovare: sceglie <strong>Tutti</strong> e rende pubblici solo <strong>Instagram</strong> e il <strong>sito</strong> della scuola. Il WhatsApp personale resta privato: lo condivide solo con chi accetta.</div>
+
+<h3>5.10 Privacy e visibilità</h3>
+<table>
+  <tr><th>Opzione</th><th>Cosa fa</th></tr>
+  <tr><td><strong>Profilo visibile</strong></td><td>Se lo spegni, non compari nelle ricerche. Utile se vuoi una pausa senza cancellarti.</td></tr>
+  <tr><td><strong>Precisione posizione: Esatta</strong></td><td>Sulla mappa il tuo bollino è vicino alla tua posizione (spostato di meno di un chilometro).</td></tr>
+  <tr><td><strong>Precisione posizione: Città</strong> <em>(predefinita)</em></td><td>Il bollino è spostato di circa due chilometri: si capisce la zona, non la via.</td></tr>
+  <tr><td><strong>Precisione posizione: Nascosta</strong></td><td>Non compari sulla mappa e la tua città non viene mostrata agli altri.</td></tr>
+</table>
+
+<div class="warn">Nei testi (bio, annunci, descrizioni dei video) numeri di telefono, email, link o linguaggio non consentito mandano il testo <strong>in revisione</strong> prima di renderlo visibile: te lo segnaliamo già mentre scrivi.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="posizione">6. La posizione: come funziona e cosa vedono gli altri</h2>
+
+<ul>
+  <li>La posizione arriva dal telefono, <strong>solo se dai il permesso</strong> e solo quella <strong>approssimata</strong> (non il GPS preciso).</li>
+  <li>Viene letta <strong>quando apri l'app</strong>, <strong>arrotondata a circa un chilometro</strong> e salvata così. La posizione precisa non viene mai memorizzata.</li>
+  <li>Sulla mappa gli altri vedono il tuo bollino <strong>spostato ancora</strong>, secondo la precisione che hai scelto (5.10).</li>
+  <li>Se <strong>togli il permesso</strong>, la posizione salvata viene cancellata e smetti di comparire nelle ricerche per distanza e sulla mappa.</li>
+  <li>La <strong>città del profilo</strong> è solo un'etichetta: non cambia dove compari.</li>
+  <li>Il badge sul profilo dice se la posizione è <strong>aggiornata</strong>. Se non lo è, basta riaprire l'app con il permesso attivo.</li>
+</ul>
+<div class="es">Sara vive a Forlì ma balla spesso a Rimini. Sul profilo scrive «Forlì»; quando apre l'app a Rimini la sua posizione si aggiorna, e le persone di Rimini la trovano vicina. Se vuole cercare partner a Bologna senza andarci, usa <a href="#cerca">Cerca da un'altra città</a>.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="home">7. Home: la bacheca degli annunci</h2>
+
+<p>La Home mostra gli annunci di chi cerca un partner, dal più rilevante: prima quelli <strong>In evidenza</strong>, poi gli altri. Scorri verso il basso per caricarne altri; in fondo leggi «Hai visto tutti gli annunci».</p>
+
+<h3>7.1 Filtri</h3>
+<p>Tocca <span class="ui">Filtra stili</span> o l'icona dei filtri.</p>
+<table>
+  <tr><th>Filtro</th><th></th><th>Cosa fa</th></tr>
+  <tr><td>Stile di ballo</td><td><span class="tag free">Gratis</span></td><td>Uno o più stili; <span class="ui">Tutti</span> per toglierli.</td></tr>
+  <tr><td>Livello</td><td><span class="tag free">Gratis</span></td><td>Il livello richiesto dall'annuncio.</td></tr>
+  <tr><td>Cerca</td><td><span class="tag free">Gratis</span></td><td>Il genere del partner cercato nell'annuncio.</td></tr>
+  <tr><td>Raggio</td><td><span class="tag free">Gratis</span> fino a 100 km</td><td>25, 50, 100 km; <span class="tag prem">Premium</span> anche 200, 500 km e <strong>Tutta Italia</strong>. Serve la posizione.</td></tr>
+  <tr><td>Cerca da un'altra città</td><td><span class="tag prem">Premium</span></td><td>Il centro della ricerca diventa quella città (anche all'estero).</td></tr>
+  <tr><td>Fascia d'età</td><td><span class="tag prem">Premium</span></td><td>L'età dell'autore dell'annuncio.</td></tr>
+  <tr><td>Solo annunci Premium</td><td><span class="tag prem">Premium</span></td><td>Solo annunci di membri Premium.</td></tr>
+</table>
+<p>Premi <span class="ui">Applica filtri</span>. Se non trovi niente, <span class="ui">Rimuovi filtri</span> riparte da zero. Dal menu puoi anche aprire gli stessi risultati sulla mappa con <span class="ui">Vedi su mappa</span>.</p>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="annuncio">8. Il dettaglio di un annuncio</h2>
+
+<p>Tocca un annuncio per aprirlo. Trovi:</p>
+<ul>
+  <li><strong>Titolo</strong> e <strong>descrizione</strong>, <strong>stile</strong> e <strong>livello</strong>.</li>
+  <li><strong>Cerca:</strong> il genere del partner cercato · <strong>Età:</strong> la fascia d'età · <strong>Zona ricercata:</strong> la città.</li>
+  <li>La scheda dell'<strong>autore</strong>, con il badge della posizione, e <span class="ui">Vedi profilo</span>.</li>
+  <li><span class="ui">Mi piace</span>: un cuore all'annuncio (il conteggio è pubblico).</li>
+  <li><span class="ui">Sono interessato/a</span>: manda un <a href="#interessi">interesse</a> all'autore.</li>
+  <li>La <strong>bandierina</strong> in alto: <a href="#sicurezza">segnala</a> l'annuncio.</li>
+</ul>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="nuovo-annuncio">9. Pubblicare un annuncio</h2>
+
+<p>Da <span class="ui">I miei</span> tocca <span class="ui">+</span> (o <span class="ui">Crea il primo annuncio</span>).</p>
+<table>
+  <tr><th>Sezione</th><th>Campo</th><th>Regole e consigli</th></tr>
+  <tr><td rowspan="2">Informazioni</td><td><strong>Titolo</strong></td><td>Obbligatorio, massimo 80 caratteri. Chiaro e concreto.</td></tr>
+  <tr><td><strong>Descrizione</strong></td><td>Obbligatoria, massimo 1.000 caratteri. Quando, dove, con che obiettivo. <strong>Niente contatti nel testo</strong>: finirebbe in revisione.</td></tr>
+  <tr><td rowspan="2">Ballo</td><td><strong>Stile di ballo</strong></td><td>Lo stile per cui cerchi.</td></tr>
+  <tr><td><strong>Livello</strong></td><td>Il livello che hai o che cerchi.</td></tr>
+  <tr><td rowspan="2">Cerca partner</td><td><strong>Genere</strong></td><td>Il genere del partner che cerchi, o tutti.</td></tr>
+  <tr><td><strong>Fascia d'età</strong></td><td>Da … a … anni, con il cursore.</td></tr>
+  <tr><td>Posizione</td><td><strong>Città</strong></td><td>Dove cerchi il partner. Scegli un suggerimento: l'annuncio comparirà sulla mappa in quella città. Se scrivi la città a mano senza sceglierla, la troviamo noi.</td></tr>
+</table>
+<p>Tocca <span class="ui">Pubblica annuncio</span>.</p>
+
+<h3>9.1 Regole</h3>
+<ul>
+  <li>Serve <strong>almeno un contatto</strong> nel profilo (5.8).</li>
+  <li>Annunci attivi contemporaneamente: <span class="tag free">Gratis</span> 2 · <span class="tag prem">Premium</span> 10.</li>
+  <li>Durata: <span class="tag free">Gratis</span> 30 giorni · <span class="tag prem">Premium</span> 90 giorni. Poi scade: puoi rinnovarlo.</li>
+  <li>Se il testo contiene contatti o parole non consentite, l'annuncio va <strong>in revisione</strong> e compare dopo il controllo.</li>
+</ul>
+
+<div class="es"><strong>Titolo:</strong> Cerco partner per bachata sensual — serate a Rimini<br>
+<strong>Descrizione:</strong> Ballo bachata da 4 anni (livello avanzato). Cerco un partner per le serate del venerdì e sabato a Rimini e Riccione, e magari un corso di perfezionamento insieme. Età indicativa 30–45.<br>
+<strong>Stile:</strong> Bachata · <strong>Livello:</strong> Avanzato · <strong>Genere:</strong> Uomo · <strong>Età:</strong> 30–45 · <strong>Città:</strong> Rimini</div>
+
+<div class="shot">Schermata: nuovo annuncio compilato come nell'esempio</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="miei-annunci">10. I miei annunci: stati e azioni</h2>
+
+<h3>10.1 Gli stati</h3>
+<table>
+  <tr><th>Stato</th><th>Significato</th></tr>
+  <tr><td><strong>Attivo</strong></td><td>Visibile a tutti. Accanto vedi i giorni rimasti e le visualizzazioni.</td></tr>
+  <tr><td><strong>Inattivo</strong></td><td>L'hai spento tu: non si vede, ma non è cancellato.</td></tr>
+  <tr><td><strong>Scaduto</strong></td><td>È passata la durata: rinnovalo per ripubblicarlo.</td></tr>
+  <tr><td><strong>In revisione</strong></td><td>Lo stiamo controllando (di solito per un contatto o una parola nel testo).</td></tr>
+  <tr><td><strong>Rifiutato</strong></td><td>Non è conforme. Modifica il testo togliendo contatti o parole non consentite: verrà ripubblicato automaticamente.</td></tr>
+</table>
+
+<h3>10.2 Le azioni</h3>
+<table>
+  <tr><th>Azione</th><th>Cosa fa</th></tr>
+  <tr><td><strong>Vedi</strong></td><td>Apre l'annuncio come lo vedono gli altri.</td></tr>
+  <tr><td><strong>Modifica</strong></td><td>Cambia qualsiasi campo.</td></tr>
+  <tr><td><strong>Rinnova</strong></td><td>Riparte da capo con la durata piena. Se hai già il massimo di annunci attivi, prima disattivane uno.</td></tr>
+  <tr><td><strong>Attiva / Disattiva</strong></td><td>Lo mostra o lo nasconde senza cancellarlo.</td></tr>
+  <tr><td><strong>Riporta in cima</strong></td><td>Lo rimette in testa alla bacheca come se fosse nuovo. Di nuovo disponibile dopo <span class="tag free">Gratis</span> 24 ore · <span class="tag prem">Premium</span> 6 ore.</td></tr>
+  <tr><td><strong>Metti in evidenza</strong> (razzo)</td><td>Per 24 ore l'annuncio sta in cima con l'etichetta <strong>In evidenza</strong>. <span class="tag prem">Premium</span> senza limiti; da Free serve un <strong>boost</strong> (il numero 🚀 in alto ti dice quanti ne hai; vedi <a href="#premium">Premium</a>). <span class="ui">Rimuovi evidenza</span> lo toglie.</td></tr>
+  <tr><td><strong>Elimina</strong></td><td>Lo cancella per sempre (ti chiediamo conferma).</td></tr>
+</table>
+<p>Qualche giorno prima della scadenza ricevi una <a href="#notifiche">notifica</a>: toccala per rinnovare.</p>
+
+<div class="tip"><strong>Riporta in cima</strong> e <strong>Metti in evidenza</strong> sono diversi: il primo è un'azione istantanea (l'annuncio torna primo, poi scende man mano che ne arrivano altri); il secondo lo tiene in cima per 24 ore, con l'etichetta.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="cerca">11. Cercare un partner</h2>
+
+<p>Tocca <span class="ui">Cerca</span>, poi l'icona dei <span class="ui">Filtri</span>, imposta quello che ti serve e premi <span class="ui">Applica filtri</span>. In alto vedi quanti filtri sono attivi e quante persone hai trovato («12 partner trovati»). <span class="ui">Reset</span> azzera tutto.</p>
+
+<h3>11.1 Filtri gratuiti</h3>
+<table>
+  <tr><th>Filtro</th><th>Cosa fa</th></tr>
+  <tr><td><strong>Stile di ballo</strong></td><td>Uno o più stili.</td></tr>
+  <tr><td><strong>Genere</strong></td><td>Tutti, Uomo, Donna, Altro.</td></tr>
+  <tr><td><strong>Raggio</strong></td><td>25, 50 o 100 km dalla tua posizione. Oltre 100 km serve Premium («Oltre 100 km serve Premium»). Senza posizione il raggio non si può usare.</td></tr>
+</table>
+
+<h3>11.2 Filtri Premium <span class="tag prem">Premium</span></h3>
+<table>
+  <tr><th>Filtro</th><th>Cosa fa</th></tr>
+  <tr><td><strong>Raggio ampio</strong></td><td>200, 500 km o <strong>Tutta Italia</strong>.</td></tr>
+  <tr><td><strong>Cerca da un'altra città</strong></td><td>Scrivi una città: la ricerca parte da lì («Ricerca da: Bologna»). Utile se ti trasferisci o vai spesso altrove.</td></tr>
+  <tr><td><strong>Fascia d'età</strong></td><td>Da … a … anni.</td></tr>
+  <tr><td><strong>Altezza</strong></td><td>Da … a … cm.</td></tr>
+  <tr><td><strong>Obiettivo</strong></td><td>Amatoriale, Agonistico, Professionale, Insegnante, Scuola.</td></tr>
+  <tr><td><strong>Solo verificati</strong></td><td>Solo profili con il badge ✓.</td></tr>
+  <tr><td><strong>Attivi di recente</strong></td><td>Solo chi ha usato l'app negli ultimi 30 giorni.</td></tr>
+  <tr><td><strong>Valutazione minima</strong></td><td>Solo chi ha almeno … stelle di media.</td></tr>
+  <tr><td><strong>Con video</strong></td><td>Solo profili con almeno un video.</td></tr>
+  <tr><td><strong>Solo Premium</strong></td><td>Solo membri Premium.</td></tr>
+  <tr><td><strong>Ordinamento</strong></td><td>Predefinito, oppure per Valutazione (le medie più alte per prime).</td></tr>
+</table>
+
+<h3>11.3 I risultati</h3>
+<p>Ogni scheda mostra foto, nome, età, città, stili principali ed eventuali badge (✓, Premium, In evidenza, livello contatti, video). Tocca la scheda per aprire il profilo. Scorri per caricare altri risultati. <span class="ui">Vedi su mappa</span> mostra le stesse persone sulla mappa.</p>
+
+<div class="es">Luca cerca una partner di Liscio per le gare. Filtri: <em>Liscio Unificato</em>, genere <em>Donna</em>, raggio <em>100 km</em>; con Premium aggiunge obiettivo <em>Agonistico</em> ed età <em>25–40</em>. Risultato: 7 persone. Apre i profili con video, guarda come ballano e manda un interesse a due di loro.</div>
+
+<div class="tip">Chi non ha la posizione aggiornata non compare nelle ricerche per distanza: non è sparito, semplicemente non sappiamo dov'è. Se trovi pochi risultati, allarga il raggio o togli qualche stile.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="mappa">12. La mappa</h2>
+
+<h3>12.1 Cosa vedi</h3>
+<ul>
+  <li>In alto scegli cosa mostrare: <strong>Annunci</strong> oppure <strong>Utenti</strong>.</li>
+  <li>I <strong>bollini</strong> hanno il colore del genere: <strong>blu</strong> uomo, <strong>rosa</strong> donna, <strong>viola</strong> altro, <strong>grigio-blu</strong> non specificato. La <strong>faccina</strong> è una persona, la <strong>nota ♪</strong> è un annuncio (colorata col genere di chi l'ha scritto).</li>
+  <li>Quando più bollini sono vicini diventano un <strong>cerchio viola con un numero</strong>. Toccalo: la mappa si avvicina finché si separano.</li>
+  <li>Tocca un bollino: in basso compare la scheda; toccala per aprire il profilo o l'annuncio.</li>
+</ul>
+
+<h3>12.2 Muoversi</h3>
+<ul>
+  <li>Trascina per spostarti, allarga o stringi con due dita per lo zoom. La mappa non ruota.</li>
+  <li><span class="ui">La mia posizione</span> (in basso a destra) ti riporta sulla tua posizione salvata, anche se avevi scelto un'altra città, e ricarica.</li>
+  <li>Lo zoom si adatta al <strong>raggio</strong>: con 25 km vedi i dintorni, con Tutta Italia vedi l'Italia.</li>
+</ul>
+
+<h3>12.3 Filtri della mappa</h3>
+<p>Tocca <span class="ui">Filtri</span>: sono gli stessi della ricerca (per gli utenti) o della bacheca (per gli annunci), con le stesse regole Gratis/Premium. Genere ed età si applicano alle persone, non agli annunci. Con <strong>Cerca da un'altra città</strong> <span class="tag prem">Premium</span> la mappa si sposta lì, anche all'estero.</p>
+
+<div class="es">Anna è in vacanza a Barcellona: nei filtri della mappa sceglie «Barcelona — Catalonia, Spagna» e vede gli annunci di bachata della zona.</div>
+
+<h3>12.4 Privacy sulla mappa</h3>
+<p>Nessun bollino è nel punto esatto: la posizione è arrotondata e poi spostata secondo la precisione scelta da ciascuno (<a href="#posizione">6</a>). Chi ha scelto «Nascosta» non compare.</p>
+<p>La piccola <strong>«i»</strong> in basso a sinistra mostra i crediti della mappa (© OpenStreetMap).</p>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="interessi">13. Interessi: il primo passo</h2>
+
+<p>Un <strong>interesse</strong> è il modo per dire «mi piacerebbe ballare con te». Non si scrivono messaggi liberi: questo protegge tutti da insistenze e molestie.</p>
+
+<h3>13.1 Inviare un interesse</h3>
+<ol class="steps">
+  <li>Da un profilo o da un annuncio tocca <span class="ui">Sono interessato/a</span>.</li>
+  <li>Scegli <strong>una frase pronta</strong> tra sei temi (Un saluto · Balliamo insieme · Stessi stili · Serate ed eventi · Pratica e crescita · Conosciamoci), oppure nessun messaggio.</li>
+  <li>Premi <span class="ui">Invia interesse</span>: vedrai «Interesse inviato!».</li>
+</ol>
+<ul>
+  <li>Limite: <span class="tag free">Gratis</span> 5 interessi nelle 24 ore · <span class="tag prem">Premium</span> 30.</li>
+  <li>Un solo interesse per persona: se ci riprovi leggi «Hai già inviato un interesse» o «Siete già connessi».</li>
+  <li>Puoi ritirarlo finché è in attesa: <span class="ui">Annulla interesse</span>.</li>
+</ul>
+
+<h3>13.2 Dove li trovi</h3>
+<p>Dal profilo tocca <span class="ui">I miei contatti</span>: due schede, <strong>Ricevuti</strong> e <strong>Inviati</strong>. Ogni interesse ha uno stato:</p>
+<table>
+  <tr><th>Stato</th><th>Significato</th></tr>
+  <tr><td><strong>In attesa</strong></td><td>L'altra persona non ha ancora risposto.</td></tr>
+  <tr><td><strong>Connessi ✓</strong></td><td>Ha accettato: potete vedere i contatti che vi siete condivisi.</td></tr>
+  <tr><td><strong>Non risposto</strong></td><td>La richiesta è stata ignorata. Non viene detto esplicitamente, per rispetto di entrambi.</td></tr>
+  <tr><td><strong>In revisione</strong></td><td>Raro: l'interesse è in controllo.</td></tr>
+</table>
+
+<h3>13.3 Rispondere a un interesse ricevuto</h3>
+<ul>
+  <li><span class="ui">Accetta</span>: si apre <strong>Condividi i tuoi contatti</strong>. Accendi i canali che vuoi mostrare a quella persona e premi <span class="ui">Accetta e condividi</span>, oppure <span class="ui">Accetta senza condividere</span> (potrai condividere dopo).</li>
+  <li><span class="ui">Ignora</span>: l'interesse sparisce; l'altra persona vede «Non risposto».</li>
+  <li>In qualsiasi momento: <span class="ui">Annulla connessione</span> chiude il collegamento.</li>
+</ul>
+
+<div class="es">Marco manda a Giulia l'interesse «Ti andrebbe di ballare insieme a una delle prossime serate?». Giulia riceve la notifica «Marco è interessato!», guarda il suo profilo e i video, tocca <em>Accetta</em> e condivide solo Instagram. Marco riceve «Giulia ha accettato! 🎉» e vede il suo Instagram, ma non il suo WhatsApp.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="contatti">14. Contatti: chi vede cosa</h2>
+
+<h3>14.1 Vedere i contatti degli altri</h3>
+<p>Sul profilo di un'altra persona, la sezione contatti ti dice sempre perché vedi o non vedi qualcosa:</p>
+<table>
+  <tr><th>Messaggio</th><th>Perché</th></tr>
+  <tr><td>«Siete connessi — puoi vedere i contatti»</td><td>Ha accettato il tuo interesse e ti ha condiviso dei canali.</td></tr>
+  <tr><td>«Siete connessi, ma … non ha condiviso canali con te»</td><td>Ha accettato senza condividere, per ora.</td></tr>
+  <tr><td>«Invia un interesse per vedere i contatti»</td><td>Usa l'opzione «Solo dopo interesse accettato».</td></tr>
+  <tr><td>«Solo utenti Premium possono vedere i contatti»</td><td>Usa l'opzione «Solo utenti Premium».</td></tr>
+  <tr><td>«Questo utente preferisce non condividere i contatti»</td><td>Usa l'opzione «Nessuno».</td></tr>
+  <tr><td>«Completa il tuo profilo per vedere i contatti degli altri»</td><td>Ti mancano <strong>foto</strong> o <strong>città</strong>. Chi si nasconde dietro un profilo vuoto non entra in contatto con nessuno.</td></tr>
+</table>
+
+<h3>14.2 Contattare</h3>
+<p>Quando vedi i contatti tocca <span class="ui">Contatta …</span> e scegli il canale. Per WhatsApp ed email prepariamo già un messaggio («Ciao Giulia, ti ho trovato su {{NOME_APP}}! Sei ancora disponibile per l'annuncio?»), che puoi modificare prima di inviarlo.</p>
+
+<h3>14.3 Gestire e revocare</h3>
+<ul>
+  <li><span class="ui">Impostazioni → Contatti condivisi</span>: l'elenco di chi vede i tuoi contatti e quali. Per ciascuno puoi cambiare i canali o toccare <span class="ui">Revoca</span>: da quel momento non li vede più.</li>
+  <li>Dal profilo di una persona connessa puoi fare lo stesso solo per lei.</li>
+</ul>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="piace">15. Mi piace, visite e valutazioni</h2>
+
+<table>
+  <tr><th>Funzione</th><th>Come funziona</th></tr>
+  <tr><td><strong>Mi piace</strong> a un profilo o a un annuncio</td><td>Tocca il cuore; toccalo di nuovo per toglierlo. Il numero è pubblico. <span class="tag prem">Premium</span> vede <strong>chi</strong> ha messo Mi piace al proprio profilo.</td></tr>
+  <tr><td><strong>Chi ti ha visto</strong></td><td>Ogni visita al tuo profilo viene contata. <span class="tag free">Gratis</span> vedi il numero, <span class="tag prem">Premium</span> l'elenco delle persone.</td></tr>
+  <tr><td><strong>Valutazione</strong></td><td>Sul profilo di un'altra persona tocca <span class="ui">Valuta …</span> e scegli da 1 a 5 stelle (Scarsa · Sufficiente · Buona · Ottima · Eccellente). Solo stelle, niente commenti. Puoi cambiarla (<span class="ui">Aggiorna valutazione</span>) o toglierla (<span class="ui">Rimuovi la mia valutazione</span>). Sul profilo compare la media.</td></tr>
+  <tr><td><strong>Livello contatti</strong></td><td>Il badge Connesso / Ben connesso / Molto connesso indica quante persone hanno condiviso i propri contatti con quell'utente (da 1, 5, 10). È un segnale di fiducia della comunità.</td></tr>
+</table>
+<div class="tip">Valuta solo persone con cui hai ballato davvero, e con onestà: le valutazioni aiutano tutti a scegliere.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="sicurezza">16. Bloccare e segnalare</h2>
+
+<div class="warn">Se sei in pericolo immediato chiama il <strong>112</strong>. {{NOME_APP}} non è un servizio di emergenza.</div>
+
+<h3>16.1 Bloccare</h3>
+<p>Dal profilo (menu <strong>⋮</strong> in alto) tocca <span class="ui">Blocca utente</span>. È <strong>immediato</strong> e riguarda solo te: quella persona non ti trova più nella ricerca e sulla mappa e non può mandarti interessi. Non riceve nessun avviso. Per sbloccare: <span class="ui">Impostazioni → Utenti bloccati → Sblocca</span>.</p>
+
+<h3>16.2 Segnalare</h3>
+<p>Sul profilo (menu ⋮ → <span class="ui">Segnala</span>) o sull'annuncio (bandierina). Segnalare fa esaminare il caso a una persona del nostro staff.</p>
+<ol class="steps">
+  <li>Scegli il <strong>motivo</strong>:
+    <ul>
+      <li>Sicurezza personale, stalking</li>
+      <li>Molestie o minacce</li>
+      <li>Contenuti o richieste sessuali</li>
+      <li>Utente minorenne</li>
+      <li>Truffa o frode</li>
+      <li>Si spaccia per un'altra persona</li>
+      <li>Profilo falso</li>
+      <li>Contenuto inappropriato</li>
+      <li>Foto o dati altrui senza consenso</li>
+      <li>Raccolta contatti / spam</li>
+      <li>Annuncio duplicato o fuori tema (solo per gli annunci)</li>
+      <li>Altro</li>
+    </ul>
+  </li>
+  <li>Per molti motivi ti chiediamo <strong>Dov'è successo?</strong>: Dentro {{NOME_APP}} · Durante o dopo un incontro · Su WhatsApp · Su Instagram · Altrove. Vale anche quello che succede <strong>fuori</strong> dall'app: ci serve per capire cosa possiamo verificare.</li>
+  <li>Scrivi <strong>Cosa è successo?</strong>: aiuta moltissimo. Date, frasi, circostanze.</li>
+  <li>Conferma la <strong>dichiarazione</strong> («Dichiaro che quanto riportato è vero per quanto ne so») e invia.</li>
+</ol>
+<ul>
+  <li>Chi hai segnalato <strong>non saprà mai</strong> che sei stato tu.</li>
+  <li>Puoi fare fino a 5 segnalazioni nelle 24 ore; la stessa persona o lo stesso annuncio si segnalano una volta sola finché il caso è aperto.</li>
+  <li>Se altri hanno già segnalato la stessa cosa, te lo diciamo: le segnalazioni finiscono nello stesso caso.</li>
+  <li><strong>Senza account</strong> puoi segnalare dalla pagina pubblica <a href="./segnala.html">Segnala</a>.</li>
+  <li>Per problemi tecnici o altro: <span class="ui">Impostazioni → Segnala un problema o un contenuto</span>.</li>
+</ul>
+
+<h3>16.3 Consigli per incontrarsi</h3>
+<ul>
+  <li>La prima volta, incontratevi in un luogo pubblico: una serata, una scuola, una sala prove.</li>
+  <li>Dillo a un amico o un'amica.</li>
+  <li>Il badge ✓ dice che abbiamo controllato il profilo, <strong>non</strong> che la persona è affidabile: usa sempre il buon senso.</li>
+  <li>Nessuno ti deve chiedere soldi: se succede, segnala come «Truffa o frode».</li>
+</ul>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="provvedimenti">17. Dopo una segnalazione: provvedimenti e riesame</h2>
+
+<p>Ogni segnalazione viene letta da una persona. Se è fondata, il provvedimento è <strong>proporzionato</strong>. Chi lo riceve viene sempre avvisato, con motivo e durata, in <span class="ui">Impostazioni → Stato account e avvisi</span> (gli avvisi non ancora letti sono evidenziati con <strong>NUOVO</strong>).</p>
+
+<table>
+  <tr><th>Avviso</th><th>Cosa significa</th></tr>
+  <tr><td><strong>Richiamo</strong></td><td>Segnalazione fondata, nessuna limitazione: un invito a rispettare le regole.</td></tr>
+  <tr><td><strong>Richiamo formale</strong></td><td>Come sopra, ma se succede ancora l'account può essere limitato o sospeso.</td></tr>
+  <tr><td><strong>Contenuto rimosso</strong></td><td>Una foto, un testo o un annuncio è stato tolto. L'account resta attivo.</td></tr>
+  <tr><td><strong>Funzioni temporaneamente limitate</strong></td><td>Fino a una data non puoi pubblicare o modificare annunci, inviare interessi o lasciare valutazioni. Il resto funziona.</td></tr>
+  <tr><td><strong>Account sospeso temporaneamente</strong></td><td>Non puoi usare l'app fino alla data indicata.</td></tr>
+  <tr><td><strong>Account escluso</strong></td><td>Esclusione definitiva, per violazioni gravi.</td></tr>
+  <tr><td><strong>Verifica in corso</strong></td><td>Mentre controlliamo una segnalazione il profilo non compare nelle ricerche; per il resto usi l'app normalmente.</td></tr>
+  <tr><td><strong>Verifica conclusa</strong></td><td>Il controllo è finito senza provvedimenti.</td></tr>
+</table>
+
+<h3>17.1 Chiedere un riesame</h3>
+<p>Ogni provvedimento ha un <strong>codice</strong> (es. «Codice del provvedimento: …»). Se pensi che abbiamo sbagliato, entro <strong>14 giorni</strong> scrivi all'indirizzo indicato nell'avviso citando il codice. Il caso viene riaperto e, nel frattempo, il provvedimento viene sospeso. Riceverai uno di questi avvisi:</p>
+<ul>
+  <li><strong>Riesame in corso</strong> — stiamo riesaminando; puoi usare l'app normalmente.</li>
+  <li><strong>Riesame accolto</strong> — avevi ragione: il provvedimento è annullato.</li>
+  <li><strong>Riesame concluso</strong> — confermiamo la decisione.</li>
+</ul>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="punti">18. Punti Sicurezza</h2>
+
+<p>Quando una tua segnalazione viene <strong>confermata</strong> guadagni punti, che puoi trasformare in Premium senza pagare. Li trovi in <span class="ui">Impostazioni → Punti Sicurezza</span>.</p>
+<ul>
+  <li>Quanti: <strong>10 punti</strong> per una segnalazione confermata, <strong>fino a 20</strong> se è stata decisiva, <strong>3</strong> se il caso era già noto grazie ad altri.</li>
+  <li>Tetto: al massimo <strong>100 punti in 30 giorni</strong>. Raggiunto il tetto, le segnalazioni successive torneranno a fruttare più avanti.</li>
+  <li>Segnalare a caso non conviene: le segnalazioni infondate abbassano il peso delle tue.</li>
+  <li>Se un caso viene riaperto e annullato, i punti relativi vengono <strong>stornati</strong> (lo vedi nei Movimenti).</li>
+</ul>
+<h3>18.1 Il negozio</h3>
+<table>
+  <tr><th>Costo</th><th>Ottieni</th></tr>
+  <tr><td class="num">100 punti</td><td>1 giorno di Premium</td></tr>
+  <tr><td class="num">250 punti</td><td>3 giorni di Premium</td></tr>
+  <tr><td class="num">500 punti</td><td>7 giorni di Premium</td></tr>
+</table>
+<p>Tocca <span class="ui">Riscatta</span> e conferma. Se hai già un abbonamento, i giorni si <strong>aggiungono</strong>. Durante la <strong>promo di lancio</strong> il negozio è chiuso (sei già Premium): i punti restano tuoi per dopo. Nella stessa schermata vedi saldo, punti guadagnati e usati, e tutti i movimenti.</p>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="verifica">19. Verifica del profilo (badge ✓)</h2>
+
+<p>In <span class="ui">Impostazioni → Verifica profilo</span> vedi quali requisiti hai già:</p>
+<ul>
+  <li>Foto profilo presente</li>
+  <li>Almeno 3 stili di ballo</li>
+  <li>Bio di almeno 50 caratteri</li>
+  <li>Città impostata</li>
+  <li>Profilo completo almeno al 70%</li>
+</ul>
+<p>Quando sono tutti soddisfatti tocca <span class="ui">Invia richiesta di verifica</span>: rispondiamo entro 48 ore. Con il badge compari nel filtro <strong>Solo verificati</strong>.</p>
+<div class="warn">Il badge ✓ dice che abbiamo controllato il profilo, non che la persona è affidabile.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="premium">20. Premium, promo e boost</h2>
+
+<div class="box"><strong>Al lancio {{NOME_APP}} è gratis per tutti.</strong> Durante la promo di lancio tutte le funzioni Premium sono sbloccate, senza pagare nulla. Quando finirà ti avviseremo con largo anticipo, e quello che hai creato (foto, video, annunci) resterà tuo.</div>
+
+<h3>20.1 Gratis e Premium a confronto</h3>
+<table>
+  <tr><th>Funzione</th><th>Gratis</th><th>Premium</th></tr>
+  <tr><td>Annunci attivi insieme</td><td>2</td><td>10</td></tr>
+  <tr><td>Durata di un annuncio</td><td>30 giorni</td><td>90 giorni</td></tr>
+  <tr><td>Foto in galleria</td><td>1</td><td>10</td></tr>
+  <tr><td>Stili di ballo sul profilo</td><td>3</td><td>illimitati</td></tr>
+  <tr><td>Video sul profilo</td><td>—</td><td>5</td></tr>
+  <tr><td>Filtri di ricerca</td><td>base</td><td>avanzati</td></tr>
+  <tr><td>Raggio di ricerca</td><td>fino a 100 km</td><td>fino a Tutta Italia e da altre città</td></tr>
+  <tr><td>Interessi nelle 24 ore</td><td>5</td><td>30</td></tr>
+  <tr><td>Riporta in cima un annuncio</td><td>ogni 24 ore</td><td>ogni 6 ore</td></tr>
+  <tr><td>Metti in evidenza (24 ore)</td><td>con un boost</td><td>senza limiti, anche il profilo</td></tr>
+  <tr><td>Chi ti ha visto / Chi ti ha messo Mi piace</td><td>solo il numero</td><td>l'elenco completo</td></tr>
+  <tr><td>Posizione nel feed</td><td>standard</td><td>con priorità</td></tr>
+  <tr><td>Badge Premium</td><td>—</td><td>✓</td></tr>
+</table>
+
+<h3>20.2 Come si ottiene</h3>
+<ul>
+  <li><strong>Promo di lancio</strong>: adesso, per tutti.</li>
+  <li><strong>Punti Sicurezza</strong>: da 1 a 7 giorni (vedi <a href="#punti">18</a>).</li>
+  <li><strong>Abbonamento</strong> mensile o annuale, quando sarà disponibile: da <span class="ui">Impostazioni → Passa a Premium</span>. Si rinnova da solo e si annulla quando vuoi da <span class="ui">Gestisci abbonamento su Google Play</span>. Se cambi telefono: <span class="ui">Ripristina acquisti</span>.</li>
+</ul>
+
+<h3>20.3 Boost</h3>
+<p>Un <strong>boost</strong> mette un tuo annuncio in evidenza per 24 ore. Chi è Premium non ne ha bisogno; da Free, quando saranno in vendita, si acquistano singolarmente e si usano da <span class="ui">I miei annunci → Metti in evidenza</span>. Il numero 🚀 in alto ti dice quanti ne hai.</p>
+
+<div class="warn">Cancellare l'account <strong>non</strong> disdice l'abbonamento: annullalo prima da Google Play.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="notifiche">21. Notifiche</h2>
+<table>
+  <tr><th>Quando</th><th>Cosa ricevi</th></tr>
+  <tr><td>Qualcuno ti manda un interesse</td><td>«… è interessato/a!» — tocca per vedere la richiesta.</td></tr>
+  <tr><td>Qualcuno accetta il tuo interesse</td><td>«… ha accettato! 🎉» — tocca per aprire il profilo e i contatti.</td></tr>
+  <tr><td>Un tuo annuncio sta per scadere</td><td>«Il tuo annuncio sta per scadere» — tocca per rinnovarlo.</td></tr>
+  <tr><td>Un avviso sul tuo account</td><td>«Aggiornamento sul tuo account» — tocca per leggerlo.</td></tr>
+</table>
+<p>Le notifiche arrivano nella lingua che hai scelto nell'app. Sono divise in due gruppi, <strong>Interessi</strong> e <strong>Generali</strong>, che puoi spegnere separatamente dalle impostazioni di Android (Impostazioni del telefono → App → {{NOME_APP}} → Notifiche).</p>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="impostazioni">22. Impostazioni, voce per voce</h2>
+<p>Dal profilo, ingranaggio in alto.</p>
+<table>
+  <tr><th>Voce</th><th>A cosa serve</th></tr>
+  <tr><td><strong>Come funziona {{NOME_APP}}</strong></td><td>Il tutorial breve, in otto pagine.</td></tr>
+  <tr><td><strong>Guida completa</strong></td><td>Questa guida.</td></tr>
+  <tr><td><strong>Email</strong></td><td>L'indirizzo con cui accedi.</td></tr>
+  <tr><td><strong>Modifica profilo</strong></td><td>Vedi <a href="#modifica-profilo">5</a>.</td></tr>
+  <tr><td><strong>Passa a Premium / Gestisci abbonamento</strong></td><td>Vedi <a href="#premium">20</a>. Durante la promo vedi «Tutto Premium gratis».</td></tr>
+  <tr><td><strong>Contatti condivisi</strong></td><td>Chi vede i tuoi contatti; cambia o revoca. Vedi <a href="#contatti">14</a>.</td></tr>
+  <tr><td><strong>Utenti bloccati</strong></td><td>Vedi e sblocca. Vedi <a href="#sicurezza">16</a>.</td></tr>
+  <tr><td><strong>Verifica profilo</strong></td><td>Requisiti e richiesta del badge ✓. Vedi <a href="#verifica">19</a>.</td></tr>
+  <tr><td><strong>Stato account e avvisi</strong></td><td>Lo stato del tuo account e le comunicazioni. Vedi <a href="#provvedimenti">17</a>.</td></tr>
+  <tr><td><strong>Punti Sicurezza</strong></td><td>Saldo, negozio, movimenti. Vedi <a href="#punti">18</a>.</td></tr>
+  <tr><td><strong>Dark Mode</strong></td><td>Tema scuro o chiaro.</td></tr>
+  <tr><td><strong>Lingua dell'app</strong></td><td>Italiano o Inglese (anche dal selettore in alto nel profilo).</td></tr>
+  <tr><td><strong>Privacy Policy · Termini di servizio</strong></td><td>I documenti legali, nella lingua dell'app.</td></tr>
+  <tr><td><strong>Crediti e licenze</strong></td><td>Chi fornisce mappa e dati delle città.</td></tr>
+  <tr><td><strong>Statistiche di utilizzo</strong></td><td>Accese o spente: se accese ci aiuti a capire cosa migliorare.</td></tr>
+  <tr><td><strong>Richiedi i miei dati</strong></td><td>Prepara un'email per ricevere una copia dei tuoi dati (GDPR).</td></tr>
+  <tr><td><strong>Segnala un problema o un contenuto</strong></td><td>Prepara un'email all'assistenza con i dati tecnici già inseriti.</td></tr>
+  <tr><td><strong>Versione app · Valuta l'app</strong></td><td>La versione installata; una recensione su Google Play ci aiuta molto.</td></tr>
+  <tr><td><strong>Esci</strong></td><td>Chiude la sessione su questo telefono.</td></tr>
+  <tr><td><strong>Elimina account</strong></td><td>Vedi <a href="#account">23</a>.</td></tr>
+</table>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="account">23. I tuoi dati e il tuo account</h2>
+<ul>
+  <li><strong>Copia dei tuoi dati</strong>: <span class="ui">Impostazioni → Richiedi i miei dati</span> prepara la richiesta; ti rispondiamo per email.</li>
+  <li><strong>Eliminare l'account</strong>: <span class="ui">Impostazioni → Elimina account → Elimina definitivamente</span>. Profilo, foto, annunci e contatti vengono cancellati e l'operazione non si può annullare. Se hai un abbonamento, <strong>disdicilo prima</strong> da Google Play. Se il telefono chiede di accedere di nuovo per sicurezza, esci, rientra e riprova.</li>
+  <li><strong>Aggiornamenti</strong>: se c'è una versione nuova ti avvisiamo («C'è una versione nuova»: puoi aggiornare anche più tardi). Se una versione non è più supportata vedrai «Aggiornamento necessario»: aggiorna dallo store per continuare.</li>
+  <li>Come trattiamo i dati è spiegato nella <a href="./privacy.html">Privacy Policy</a>.</li>
+</ul>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="faq">24. Domande frequenti</h2>
+
+<details><summary>Non compaio nelle ricerche: perché?</summary>
+<p>Controlla tre cose: che <strong>Profilo visibile</strong> sia acceso (5.10), che la <strong>posizione sia aggiornata</strong> (badge sul profilo, <a href="#posizione">6</a>), e che non ci sia una <strong>Verifica in corso</strong> (Impostazioni → Stato account e avvisi).</p></details>
+
+<details><summary>Ho accettato un interesse ma l'altra persona dice di non vedere i miei contatti.</summary>
+<p>Probabilmente hai accettato senza condividere, oppure usi «Solo utenti Premium» e l'altra persona è Free. Vai in Impostazioni → Contatti condivisi e controlla i canali per quella persona.</p></details>
+
+<details><summary>Non riesco a pubblicare un annuncio.</summary>
+<p>Serve almeno un contatto nel profilo (5.8). Se hai già il massimo di annunci attivi (2 o 10), disattivane o eliminane uno. Se il tuo account ha funzioni limitate, lo trovi scritto in Stato account e avvisi.</p></details>
+
+<details><summary>Il mio annuncio è «In revisione» o «Rifiutato».</summary>
+<p>Di solito c'è un contatto (telefono, email, link) o una parola non consentita nel testo. Toglila con Modifica: se era rifiutato, viene ripubblicato automaticamente.</p></details>
+
+<details><summary>La mia foto non si vede.</summary>
+<p>Ogni foto nuova viene approvata prima di essere pubblicata: vedrai «in revisione» finché non è controllata.</p></details>
+
+<details><summary>Non vedo i contatti di nessuno.</summary>
+<p>Aggiungi una <strong>foto</strong> e la <strong>città</strong> al tuo profilo: sono richieste per vedere i contatti degli altri.</p></details>
+
+<details><summary>Ho raggiunto il limite di interessi.</summary>
+<p>Con il piano gratuito puoi mandarne 5 nelle 24 ore; con Premium 30. Il conteggio è sulle ultime 24 ore, non sul giorno di calendario.</p></details>
+
+<details><summary>Qualcuno mi dà fastidio fuori dall'app, su WhatsApp.</summary>
+<p>Bloccalo nell'app e segnalalo scegliendo «Su WhatsApp» come luogo. Se ti senti in pericolo chiama il 112.</p></details>
+
+<details><summary>La mappa è vuota.</summary>
+<p>Controlla la modalità (Annunci o Utenti), il raggio e i filtri attivi. Se sei in una zona con pochi iscritti, prova «Tutta Italia» o un'altra città.</p></details>
+
+<details><summary>Cosa succede ai miei dati se elimino l'account?</summary>
+<p>Vengono cancellati; alcune informazioni legate a segnalazioni e provvedimenti possono essere conservate per il tempo indicato nella Privacy Policy.</p></details>
+
+<details><summary>Ho cambiato telefono: perdo Premium?</summary>
+<p>No: accedi con lo stesso account. Se hai un abbonamento, in Premium tocca «Ripristina acquisti».</p></details>
+
+<details><summary>Posso usare l'app in inglese?</summary>
+<p>Sì: Impostazioni → Lingua dell'app, oppure il selettore in alto nel profilo. Anche le notifiche e le pagine legali seguono la lingua scelta.</p></details>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="glossario">25. Glossario</h2>
+<table>
+  <tr><td><strong>Annuncio</strong></td><td>Un messaggio pubblico in cui cerchi un partner, con stile, livello, zona e durata.</td></tr>
+  <tr><td><strong>Interesse</strong></td><td>La richiesta di contatto verso un'altra persona, con una frase pronta.</td></tr>
+  <tr><td><strong>Connessione</strong></td><td>Un interesse accettato: da lì potete vedere i contatti condivisi.</td></tr>
+  <tr><td><strong>Canale</strong></td><td>Un contatto: WhatsApp, Instagram, TikTok, email o sito.</td></tr>
+  <tr><td><strong>In evidenza</strong></td><td>Un annuncio o profilo messo in cima per 24 ore.</td></tr>
+  <tr><td><strong>Riporta in cima</strong></td><td>Rimettere un annuncio in testa alla bacheca, come se fosse nuovo.</td></tr>
+  <tr><td><strong>Boost</strong></td><td>Un credito per mettere in evidenza un annuncio.</td></tr>
+  <tr><td><strong>Badge ✓</strong></td><td>Profilo controllato dal nostro staff.</td></tr>
+  <tr><td><strong>Livello contatti</strong></td><td>Quante persone hanno condiviso i propri contatti con quell'utente.</td></tr>
+  <tr><td><strong>Punti Sicurezza</strong></td><td>Punti per le segnalazioni confermate, da trasformare in Premium.</td></tr>
+  <tr><td><strong>Provvedimento</strong></td><td>La decisione presa dopo una segnalazione fondata (dal richiamo all'esclusione).</td></tr>
+  <tr><td><strong>Riesame</strong></td><td>La richiesta di rivedere un provvedimento, entro 14 giorni.</td></tr>
+  <tr><td><strong>Promo di lancio</strong></td><td>Il periodo iniziale in cui Premium è gratis per tutti.</td></tr>
+</table>
+
+<footer>
+  {{NOME_APP}} · <a href="./index.html">Documenti legali</a> · <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Termini</a> · <a href="./segnala.html">Segnala</a>
+</footer>
+</div>
+</main>
+</body>
+</html>
