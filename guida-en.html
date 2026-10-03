@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Complete guide — {{NOME_APP}}</title>
+<meta name="description" content="Everything you can do with {{NOME_APP}}, explained step by step with examples: profile, listings, search, map, contacts, safety, Premium.">
+<meta name="robots" content="index,follow">
+<link rel="alternate" hreflang="it" href="./guida.html">
+<link rel="alternate" hreflang="en" href="./guida-en.html">
+<link rel="stylesheet" href="./legal.css">
+<script src="./legal.js" defer></script>
+<style>
+  .es{border-left:4px solid var(--verde);background:#f3fbf7;border-radius:0 12px 12px 0;padding:12px 16px;margin:14px 0}
+  .es::before{content:"Example";display:block;font-weight:700;color:#1d8a57;font-size:.85rem;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
+  .tip{border-left:4px solid var(--viola);background:var(--viola-soft);border-radius:0 12px 12px 0;padding:12px 16px;margin:14px 0}
+  .tip::before{content:"Tip";display:block;font-weight:700;color:var(--viola);font-size:.85rem;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
+  .warn{border-left:4px solid var(--err);background:#fdf2f1;border-radius:0 12px 12px 0;padding:12px 16px;margin:14px 0}
+  .warn::before{content:"Important";display:block;font-weight:700;color:var(--err);font-size:.85rem;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
+  .shot{border:2px dashed #cfc8de;border-radius:12px;padding:14px;margin:14px 0;color:var(--muted);font-size:.9rem;text-align:center;background:#fcfbfe}
+  .shot::before{content:"📷 ";}
+  .tag{display:inline-block;font-size:.76rem;font-weight:700;border-radius:999px;padding:1px 9px;vertical-align:middle;margin-left:4px}
+  .free{background:#e7f7ef;color:#1d8a57}
+  .prem{background:#fff3c4;color:#8a6500}
+  .ui{font-weight:600;color:var(--viola)}
+  h3{font-size:1.02rem;margin:24px 0 6px}
+  ol.steps>li{margin:6px 0}
+  details{border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:10px 0}
+  details summary{cursor:pointer;font-weight:600}
+</style>
+</head>
+<body>
+<header class="band">
+  <nav class="lang" aria-label="Language">
+    <a href="./guida.html" data-lang="it">IT</a>
+    <a href="./guida-en.html" data-lang="en" aria-current="true">EN</a>
+  </nav>
+  <div class="wrap">
+    <div class="brand"><span class="note">&#9835;</span> {{NOME_APP}}</div>
+    <h1>Complete app guide</h1>
+    <p>Every screen, every option, with examples. Updated 27/09/2026.</p>
+  </div>
+</header>
+<main>
+<div class="wrap">
+
+<p>This guide explains <strong>everything</strong> you can do with {{NOME_APP}}: from signing up to finding a partner, from listings to the map, from contacts to safety. Read it from start to finish, or jump to the section you need from the contents. Inside the app you'll find it under <span class="ui">Settings → Complete guide</span>.</p>
+
+<p>Features marked <span class="tag free">Free</span> are for everyone; those marked <span class="tag prem">Premium</span> need a subscription, Safety Points or the launch promo (see <a href="#premium">Premium</a>).</p>
+
+<nav class="toc" aria-label="Contents">
+<strong>Contents</strong>
+<ol>
+  <li><a href="#inizio">Before you start</a></li>
+  <li><a href="#accesso">Signing up and signing in</a></li>
+  <li><a href="#navigazione">How the app is organised</a></li>
+  <li><a href="#profilo">Your profile</a></li>
+  <li><a href="#modifica-profilo">Editing your profile, field by field</a></li>
+  <li><a href="#posizione">Location: how it works and what others see</a></li>
+  <li><a href="#home">Home: the listings board</a></li>
+  <li><a href="#annuncio">Listing details</a></li>
+  <li><a href="#nuovo-annuncio">Publishing a listing</a></li>
+  <li><a href="#miei-annunci">My listings: statuses and actions</a></li>
+  <li><a href="#cerca">Searching for a partner</a></li>
+  <li><a href="#mappa">The map</a></li>
+  <li><a href="#interessi">Interests: the first step</a></li>
+  <li><a href="#contatti">Contacts: who sees what</a></li>
+  <li><a href="#piace">Likes, views and ratings</a></li>
+  <li><a href="#sicurezza">Blocking and reporting</a></li>
+  <li><a href="#provvedimenti">After a report: measures and appeals</a></li>
+  <li><a href="#punti">Safety Points</a></li>
+  <li><a href="#verifica">Profile verification (✓ badge)</a></li>
+  <li><a href="#premium">Premium, promo and boosts</a></li>
+  <li><a href="#notifiche">Notifications</a></li>
+  <li><a href="#impostazioni">Settings, item by item</a></li>
+  <li><a href="#account">Your data and your account</a></li>
+  <li><a href="#faq">Frequently asked questions</a></li>
+  <li><a href="#glossario">Glossary</a></li>
+</ol>
+</nav>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="inizio">1. Before you start</h2>
+
+<p>{{NOME_APP}} helps you <strong>find people to dance with</strong>: a competition partner, a companion for social nights, someone to take a course with, students or teachers. It works in three ways, which you can combine:</p>
+<ul>
+  <li><strong>Listings</strong>: you write what you're looking for («Looking for a bachata partner for social nights in Rimini») and wait for replies.</li>
+  <li><strong>Search</strong>: you look for people yourself, filtering by style, level, distance and much more.</li>
+  <li><strong>Map</strong>: you see who dances and who is looking around you, or in another city.</li>
+</ul>
+<p>Getting in touch is protected: first you send an <strong>interest</strong>; if the other person accepts, they decide which contacts to show you (WhatsApp, Instagram, email…). Nobody sees your number unless you want them to.</p>
+
+<h3>Requirements</h3>
+<ul>
+  <li>You must be <strong>at least 18</strong>.</li>
+  <li>You need an Android smartphone (the iPhone version will come later).</li>
+  <li>The app is available in <strong>Italian</strong> and <strong>English</strong>; you can switch language any time.</li>
+</ul>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="accesso">2. Signing up and signing in</h2>
+
+<p>The first time you open the app you see three welcome screens (<span class="ui">Next</span> to go through them, <span class="ui">Skip</span> to go straight to sign-in). Then there are two ways in.</p>
+
+<h3>2.1 With email and password</h3>
+<ol class="steps">
+  <li>Tap <span class="ui">Sign up</span>.</li>
+  <li>Fill in the fields:
+    <table>
+      <tr><th>Field</th><th>Rules</th></tr>
+      <tr><td><strong>Display name</strong></td><td>The name others see. 2 to 60 characters. Your first name, a nickname or your school's name.</td></tr>
+      <tr><td><strong>Email</strong></td><td>A real address: you'll receive a verification link. Disposable email addresses are not accepted.</td></tr>
+      <tr><td><strong>Password</strong></td><td>At least 6 characters, including at least one number.</td></tr>
+      <tr><td><strong>Confirm password</strong></td><td>The same again, to avoid typos.</td></tr>
+      <tr><td><strong>Date of birth</strong></td><td>Used to check you're 18+ and to show your age to others. The exact date is never shown.</td></tr>
+      <tr><td><strong>Gender</strong></td><td>Man, Woman, Other or Not specified. Used by the search filters.</td></tr>
+    </table>
+  </li>
+  <li>Read and accept the <strong>Terms of Service</strong> (the link is below the button).</li>
+  <li>Tap <span class="ui">Create account</span>.</li>
+  <li><strong>Verify your email</strong>: open your inbox, tap the link we sent you, come back to the app and press <span class="ui">I've verified</span>. Can't find it? Check your <strong>spam</strong> folder, or tap <span class="ui">Resend email</span>.</li>
+</ol>
+
+<h3>2.2 With Google</h3>
+<p>Tap <span class="ui">Continue with Google</span> and choose your account. The first time we only ask for two things on the <span class="ui">Complete your profile</span> screen: your <strong>date of birth</strong> and your <strong>consent</strong> to the Terms and Privacy Policy. With Google there's no email to verify.</p>
+
+<h3>2.3 Forgotten password</h3>
+<p>On the sign-in screen tap <span class="ui">Forgot password?</span>, enter your email and send the recovery link. You'll receive an email with a link to choose a new password.</p>
+
+<div class="tip">If you can't sign in, at the bottom of the sign-in screen there's a link to write to us: it prepares an email already addressed to support.</div>
+
+<div class="shot">Screenshot: sign-up with the fields filled in</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="navigazione">3. How the app is organised</h2>
+
+<p>The bar at the bottom always has five items:</p>
+<table>
+  <tr><th>Item</th><th>What you'll find</th></tr>
+  <tr><td><strong>Home</strong></td><td>The board of listings from people looking for a partner. <a href="#home">→</a></td></tr>
+  <tr><td><strong>Search</strong></td><td>Searching for people with filters. <a href="#cerca">→</a></td></tr>
+  <tr><td><strong>🌍 Map</strong></td><td>Listings and people on the map: it's the item with the globe. <a href="#mappa">→</a></td></tr>
+  <tr><td><strong>My Ads</strong></td><td>Your listings: create, renew, feature them. <a href="#miei-annunci">→</a></td></tr>
+  <tr><td><strong>Profile</strong></td><td>Your profile, your contacts and, from there, Settings (gear icon at the top). <a href="#profilo">→</a></td></tr>
+</table>
+
+<p>At the top of <span class="ui">Settings</span> there's the <span class="ui">How {{NOME_APP}} works</span> card: eight short pages with the essentials. This guide is the complete version.</p>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="profilo">4. Your profile</h2>
+
+<p>Tap <span class="ui">Profile</span> in the bottom bar. You see your profile exactly as others see it, plus a few things only you can see.</p>
+
+<h3>4.1 What everyone sees</h3>
+<ul>
+  <li>Your <strong>main photo</strong> and <strong>gallery</strong>.</li>
+  <li><strong>Display name</strong>, <strong>age</strong>, <strong>city</strong> (depending on the <a href="#posizione">location precision</a> you chose).</li>
+  <li><strong>Dance styles</strong> with your level for each, <strong>objective</strong>, <strong>what you're looking for</strong>, <strong>height</strong>, <strong>bio</strong>.</li>
+  <li><strong>Videos</strong> <span class="tag prem">Premium</span>.</li>
+  <li>Your <strong>average rating</strong> in stars, the number of <strong>Likes</strong>, your <strong>active listings</strong>.</li>
+  <li>Any badges: <strong>✓ verified</strong>, <strong>Premium</strong>, <strong>Featured</strong>, <strong>contact level</strong> (Connected / Well connected / Highly connected, based on how many people have shared their contacts with you: from 1, from 5, from 10).</li>
+  <li>The <strong>Location up to date</strong> or <strong>Location not up to date</strong> badge.</li>
+</ul>
+
+<h3>4.2 What only you see</h3>
+<ul>
+  <li><strong>Profile … % complete</strong>: the higher it is, the more you show up and the more contacts you get.</li>
+  <li><strong>Who viewed you</strong>: <span class="tag free">Free</span> you see how many people; <span class="tag prem">Premium</span> you see who they are.</li>
+  <li><strong>Who liked you</strong>: same rule.</li>
+  <li>The <span class="ui">My contacts</span> button (the <a href="#interessi">interests</a> you received and sent) and <span class="ui">Edit profile</span>.</li>
+  <li>At the top: the <strong>language</strong> selector, the rocket to <strong>feature your profile</strong> <span class="tag prem">Premium</span> (24 hours at the top of searches) and the <strong>gear</strong> for Settings.</li>
+</ul>
+
+<div class="warn">If you see a warning that your location is not up to date and you don't appear in distance searches or on the map, open the app with your phone's location on and the permission granted. See <a href="#posizione">Location</a>.</div>
+
+<div class="shot">Screenshot: your own profile with completion percentage and «Who viewed you»</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="modifica-profilo">5. Editing your profile, field by field</h2>
+
+<p>From your profile tap <span class="ui">Edit profile</span>. When you're done press <span class="ui">Save</span>: you'll see a confirmation.</p>
+
+<h3>5.1 Profile photo</h3>
+<p>Tap the photo and pick an image from your phone. Every new photo is <strong>checked before it's published</strong>: while it's under review you'll see a note saying it will be visible after approval.</p>
+<div class="tip">A photo where your face is clearly visible, maybe while dancing, makes all the difference. Without a photo you can't see other people's contacts.</div>
+
+<h3>5.2 Photo gallery</h3>
+<ul>
+  <li><span class="tag free">Free</span> 1 gallery photo · <span class="tag prem">Premium</span> up to 10.</li>
+  <li>Tap a photo and choose <span class="ui">Set as main</span>: it becomes your profile photo.</li>
+  <li>Gallery photos are reviewed too.</li>
+  <li>If you go back to Free with more than one photo, the others <strong>stay saved</strong> but hidden: they reappear if you become Premium again.</li>
+</ul>
+
+<h3>5.3 Personal information</h3>
+<table>
+  <tr><th>Field</th><th>What to write</th></tr>
+  <tr><td><strong>Display name</strong></td><td>Required, 2–60 characters.</td></tr>
+  <tr><td><strong>Bio</strong></td><td>Up to 500 characters. How you dance, for how long, what you're looking for. <strong>Don't include phone numbers, emails or links</strong>: the text would go under review (contacts have their own section, see 5.8).</td></tr>
+  <tr><td><strong>City</strong></td><td>Start typing: suggestions appear from the second character, with province and region. Pick one and the province fills in by itself. All Italian municipalities and world cities above 15,000 inhabitants are included. The city is a <strong>label</strong>: it doesn't move you on the map (see <a href="#posizione">Location</a>).</td></tr>
+  <tr><td><strong>Height</strong></td><td>In centimetres, 100 to 230. Optional, but it matters in partner dancing.</td></tr>
+</table>
+<div class="es">Type <code>fa</code> in the City field: «Fano — Pesaro e Urbino, Marche», «Faenza — Ravenna, Emilia-Romagna»… appear. For cities abroad you also see the country: typing «paris» gives «Paris — Île-de-France, France».</div>
+
+<h3>5.4 Gender, objective, looking for</h3>
+<table>
+  <tr><th>Section</th><th>Options</th></tr>
+  <tr><td><strong>Gender</strong></td><td>Man · Woman · Other · Not specified</td></tr>
+  <tr><td><strong>Objective</strong> (why you dance)</td><td>Amateur · Competitive · Professional · Teacher · Dance School</td></tr>
+  <tr><td><strong>Looking for</strong></td><td>Competition partner · Evening companion · Course partner · Student · Teacher · Performance partner</td></tr>
+</table>
+
+<h3>5.5 Dance styles and level</h3>
+<ol class="steps">
+  <li>Tap to add your first dance style (then add more).</li>
+  <li>Choose from over 60 styles, in alphabetical order: from Bachata to Zouk, including Liscio, Argentine Tango, Standard and Latin, Swing, Hip Hop and many more. If yours isn't there, choose <strong>Other</strong>.</li>
+  <li>For each style choose your <strong>level</strong>: Beginner · Basic · Intermediate · Advanced · Class D · Class C · Class B · Class A · Class S · Professional. The classes are the federal competition ones; if you don't compete, use Beginner to Advanced.</li>
+  <li>Use the up/down arrows to set the <strong>order</strong>: the first ones appear first on your cards.</li>
+</ol>
+<ul>
+  <li><span class="tag free">Free</span> up to 3 styles · <span class="tag prem">Premium</span> unlimited.</li>
+  <li>If you have more than 3 styles and go back to Free, <strong>the first 3 stay visible</strong>: put your most important ones at the top.</li>
+</ul>
+<div class="es">Giulia has danced bachata for years, salsa for a short while, and wants to start tango. She enters: <em>Bachata — Advanced</em>, <em>Salsa — Basic</em>, <em>Argentine Tango — Beginner</em>. Anyone searching for «advanced bachata» finds her straight away, and a tango teacher knows she's just starting.</div>
+
+<h3>5.6 Videos <span class="tag prem">Premium</span></h3>
+<ul>
+  <li>Up to <strong>5 videos</strong>, as a link from <strong>YouTube, Facebook, Instagram or TikTok</strong> (other sites aren't accepted).</li>
+  <li>Each with a <strong>description</strong> of up to 40 characters (e.g. «Regional final 2025»), which you can edit.</li>
+  <li>Others open them with <span class="ui">Open</span>; you can take them down with <span class="ui">Remove</span>.</li>
+  <li>Search has a <strong>With video</strong> filter: a video makes you easier to choose.</li>
+</ul>
+
+<h3>5.7 Gallery, videos and expired Premium</h3>
+<p>When Premium ends you lose nothing: photos after the first, videos and styles beyond the third stay saved and reappear if you reactivate Premium.</p>
+
+<h3>5.8 Public contacts</h3>
+<p>Here you enter the contacts you <strong>can</strong> share. Filling in a field <strong>doesn't make it visible</strong>: you decide who sees it in section 5.9. Leave empty whatever you don't want to use.</p>
+<table>
+  <tr><th>Field</th><th>Format</th></tr>
+  <tr><td><strong>WhatsApp</strong></td><td>Choose your country code and type the number, digits only (e.g. +39, 3331234567).</td></tr>
+  <tr><td><strong>Instagram</strong></td><td>Your handle without @ (letters, numbers, dot and underscore, up to 30).</td></tr>
+  <tr><td><strong>TikTok</strong></td><td>Your handle without @ (2 to 24 characters).</td></tr>
+  <tr><td><strong>Public email</strong></td><td>Can be different from your sign-in email.</td></tr>
+  <tr><td><strong>Website</strong></td><td>Must start with <code>https://</code> (e.g. your school's website).</td></tr>
+</table>
+<div class="warn">To <strong>publish a listing</strong> you need at least one contact filled in here: otherwise people who reply would have no way to reach you.</div>
+
+<h3>5.9 Who can see my contacts</h3>
+<table>
+  <tr><th>Option</th><th>What happens</th></tr>
+  <tr><td><strong>Everyone</strong></td><td>You choose <strong>which channels</strong> to make public (e.g. Instagram only): anyone registered sees those, no interest needed. The rest stay private and you share them case by case.</td></tr>
+  <tr><td><strong>Only after accepted interest</strong> <em>(recommended)</em></td><td>Nobody sees anything until you accept their interest; when you accept, you choose which channels to show that person.</td></tr>
+  <tr><td><strong>Only Premium users with accepted interest</strong></td><td>As above, but only Premium members see the contacts you share. If you accept a Free user, we'll warn you first.</td></tr>
+  <tr><td><strong>Nobody</strong></td><td>Your contacts always stay hidden. You can still receive interests and connect.</td></tr>
+</table>
+<div class="es">Marco teaches salsa and wants to be found: he picks <strong>Everyone</strong> and makes only <strong>Instagram</strong> and his school's <strong>website</strong> public. His personal WhatsApp stays private: he shares it only with people he accepts.</div>
+
+<h3>5.10 Privacy &amp; visibility</h3>
+<table>
+  <tr><th>Option</th><th>What it does</th></tr>
+  <tr><td><strong>Visible profile</strong></td><td>If you turn it off, you don't appear in searches. Useful if you want a break without deleting your account.</td></tr>
+  <tr><td><strong>Location precision: Exact</strong></td><td>Your pin on the map is close to your location (moved by less than a kilometre).</td></tr>
+  <tr><td><strong>Location precision: City</strong> <em>(default)</em></td><td>Your pin is moved by about two kilometres: people see the area, not the street.</td></tr>
+  <tr><td><strong>Location precision: Hidden</strong></td><td>You don't appear on the map and your city isn't shown to others.</td></tr>
+</table>
+
+<div class="warn">In texts (bio, listings, video descriptions), phone numbers, emails, links or disallowed language send the text <strong>under review</strong> before it becomes visible: we tell you while you're typing.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="posizione">6. Location: how it works and what others see</h2>
+
+<ul>
+  <li>Your location comes from your phone, <strong>only if you grant permission</strong>, and only the <strong>approximate</strong> one (not precise GPS).</li>
+  <li>It's read <strong>when you open the app</strong>, <strong>rounded to about one kilometre</strong> and stored that way. Your precise location is never stored.</li>
+  <li>On the map others see your pin <strong>moved further</strong>, according to the precision you chose (5.10).</li>
+  <li>If you <strong>revoke the permission</strong>, your stored location is deleted and you stop appearing in distance searches and on the map.</li>
+  <li>The <strong>city on your profile</strong> is just a label: it doesn't change where you appear.</li>
+  <li>The badge on your profile tells you whether your location is <strong>up to date</strong>. If not, just reopen the app with the permission on.</li>
+</ul>
+<div class="es">Sara lives in Forlì but often dances in Rimini. Her profile says «Forlì»; when she opens the app in Rimini her location updates, and people in Rimini find her nearby. To look for partners in Bologna without going there, she uses <a href="#cerca">Search from another city</a>.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="home">7. Home: the listings board</h2>
+
+<p>Home shows listings from people looking for a partner, most relevant first: <strong>Featured</strong> ones at the top, then the rest. Scroll down to load more; at the end you'll see that you've seen them all.</p>
+
+<h3>7.1 Filters</h3>
+<p>Tap <span class="ui">Filter styles</span> or the filters icon.</p>
+<table>
+  <tr><th>Filter</th><th></th><th>What it does</th></tr>
+  <tr><td>Dance style</td><td><span class="tag free">Free</span></td><td>One or more styles; <span class="ui">All</span> to clear them.</td></tr>
+  <tr><td>Level</td><td><span class="tag free">Free</span></td><td>The level the listing asks for.</td></tr>
+  <tr><td>Looking for</td><td><span class="tag free">Free</span></td><td>The gender of the partner the listing is looking for.</td></tr>
+  <tr><td>Radius</td><td><span class="tag free">Free</span> up to 100 km</td><td>25, 50, 100 km; <span class="tag prem">Premium</span> also 200, 500 km and <strong>All Italy</strong>. Needs your location.</td></tr>
+  <tr><td>Search from another city</td><td><span class="tag prem">Premium</span></td><td>The search is centred on that city (abroad too).</td></tr>
+  <tr><td>Age range</td><td><span class="tag prem">Premium</span></td><td>The age of the listing's author.</td></tr>
+  <tr><td>Premium ads only</td><td><span class="tag prem">Premium</span></td><td>Only listings from Premium members.</td></tr>
+</table>
+<p>Press <span class="ui">Apply filters</span>. If nothing comes up, removing the filters starts over. The globe 🌍 at the top (<span class="ui">View on map</span>) opens the same results on the map.</p>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="annuncio">8. Listing details</h2>
+
+<p>Tap a listing to open it. You'll find:</p>
+<ul>
+  <li><strong>Title</strong> and <strong>description</strong>, <strong>style</strong> and <strong>level</strong>.</li>
+  <li><strong>Seeking:</strong> the gender of the partner sought · <strong>Age:</strong> the age range · <strong>Search area:</strong> the city.</li>
+  <li>The <strong>author's</strong> card, with the location badge, and <span class="ui">View profile</span>.</li>
+  <li><span class="ui">Like</span>: a heart for the listing (the count is public).</li>
+  <li><span class="ui">I'm interested</span>: sends the author an <a href="#interessi">interest</a>.</li>
+  <li>The <strong>flag</strong> at the top: <a href="#sicurezza">report</a> the listing.</li>
+</ul>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="nuovo-annuncio">9. Publishing a listing</h2>
+
+<p>From <span class="ui">My Ads</span> tap <span class="ui">+</span>.</p>
+<table>
+  <tr><th>Section</th><th>Field</th><th>Rules and tips</th></tr>
+  <tr><td rowspan="2">Information</td><td><strong>Title</strong></td><td>Required, up to 80 characters. Clear and concrete.</td></tr>
+  <tr><td><strong>Description</strong></td><td>Required, up to 1,000 characters. When, where, with what goal. <strong>No contacts in the text</strong>: it would go under review.</td></tr>
+  <tr><td rowspan="2">Dance</td><td><strong>Dance style</strong></td><td>The style you're looking for.</td></tr>
+  <tr><td><strong>Level</strong></td><td>Your level or the one you're looking for.</td></tr>
+  <tr><td rowspan="2">Seeking partner</td><td><strong>Gender</strong></td><td>The gender of the partner you're looking for, or any.</td></tr>
+  <tr><td><strong>Age range</strong></td><td>From … to … years, with the slider.</td></tr>
+  <tr><td>Location</td><td><strong>City</strong></td><td>Where you're looking for a partner. Pick a suggestion: the listing will appear on the map in that city. If you type the city by hand without picking it, we'll find it.</td></tr>
+</table>
+<p>Tap <span class="ui">Publish listing</span>.</p>
+
+<h3>9.1 Rules</h3>
+<ul>
+  <li>You need <strong>at least one contact</strong> on your profile (5.8).</li>
+  <li>Active listings at the same time: <span class="tag free">Free</span> 2 · <span class="tag prem">Premium</span> 10.</li>
+  <li>Duration: <span class="tag free">Free</span> 30 days · <span class="tag prem">Premium</span> 90 days. Then it expires: you can renew it.</li>
+  <li>If the text contains contacts or disallowed words, the listing goes <strong>under review</strong> and appears after the check.</li>
+</ul>
+
+<div class="es"><strong>Title:</strong> Looking for a bachata sensual partner — social nights in Rimini<br>
+<strong>Description:</strong> I've danced bachata for 4 years (advanced). Looking for a partner for Friday and Saturday nights in Rimini and Riccione, and maybe a technique course together. Age roughly 30–45.<br>
+<strong>Style:</strong> Bachata · <strong>Level:</strong> Advanced · <strong>Gender:</strong> Man · <strong>Age:</strong> 30–45 · <strong>City:</strong> Rimini</div>
+
+<div class="shot">Screenshot: new listing filled in as in the example</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="miei-annunci">10. My listings: statuses and actions</h2>
+
+<h3>10.1 Statuses</h3>
+<table>
+  <tr><th>Status</th><th>Meaning</th></tr>
+  <tr><td><strong>Active</strong></td><td>Visible to everyone. Next to it you see the days left and the views.</td></tr>
+  <tr><td><strong>Inactive</strong></td><td>You turned it off: hidden, but not deleted.</td></tr>
+  <tr><td><strong>Expired</strong></td><td>Its time is up: renew it to publish it again.</td></tr>
+  <tr><td><strong>Under review</strong></td><td>We're checking it (usually because of a contact or a word in the text).</td></tr>
+  <tr><td><strong>Rejected</strong></td><td>It doesn't meet the rules. Edit the text removing contacts or disallowed words: it will be republished automatically.</td></tr>
+</table>
+
+<h3>10.2 Actions</h3>
+<table>
+  <tr><th>Action</th><th>What it does</th></tr>
+  <tr><td><strong>View</strong></td><td>Opens the listing as others see it.</td></tr>
+  <tr><td><strong>Edit</strong></td><td>Change any field.</td></tr>
+  <tr><td><strong>Renew</strong></td><td>Starts again with the full duration. If you already have the maximum number of active listings, deactivate one first.</td></tr>
+  <tr><td><strong>Activate / Deactivate</strong></td><td>Shows or hides it without deleting it.</td></tr>
+  <tr><td><strong>Move to top</strong></td><td>Puts it back at the top of the board as if it were new. Available again after <span class="tag free">Free</span> 24 hours · <span class="tag prem">Premium</span> 6 hours.</td></tr>
+  <tr><td><strong>Feature</strong> (rocket)</td><td>For 24 hours the listing stays at the top with the <strong>Featured</strong> label. <span class="tag prem">Premium</span> unlimited; on Free you need a <strong>boost</strong> (the 🚀 number at the top tells you how many you have; see <a href="#premium">Premium</a>). <span class="ui">Remove feature</span> turns it off.</td></tr>
+  <tr><td><strong>Delete</strong></td><td>Deletes it for good (we ask you to confirm).</td></tr>
+</table>
+<p>Before the listing expires you get a <a href="#notifiche">notification</a>: tap it to renew.</p>
+
+<div class="tip"><strong>Move to top</strong> and <strong>Feature</strong> are different: the first is instant (the listing goes back to first place, then slides down as new ones arrive); the second keeps it at the top for 24 hours, with the label.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="cerca">11. Searching for a partner</h2>
+
+<p>Tap <span class="ui">Search</span>, then the <span class="ui">Filters</span> icon, set what you need and press <span class="ui">Apply filters</span>. At the top you see how many filters are active and how many people you've found. <span class="ui">Reset</span> clears everything.</p>
+
+<h3>11.1 Free filters</h3>
+<table>
+  <tr><th>Filter</th><th>What it does</th></tr>
+  <tr><td><strong>Dance style</strong></td><td>One or more styles.</td></tr>
+  <tr><td><strong>Gender</strong></td><td>All, Man, Woman, Other.</td></tr>
+  <tr><td><strong>Radius</strong></td><td>25, 50 or 100 km from your location. Beyond 100 km you need Premium. Without a location the radius can't be used.</td></tr>
+</table>
+
+<h3>11.2 Premium filters <span class="tag prem">Premium</span></h3>
+<table>
+  <tr><th>Filter</th><th>What it does</th></tr>
+  <tr><td><strong>Wide radius</strong></td><td>200, 500 km or <strong>All Italy</strong>.</td></tr>
+  <tr><td><strong>Search from another city</strong></td><td>Type a city: the search starts from there. Useful if you're moving or often go somewhere else.</td></tr>
+  <tr><td><strong>Age range</strong></td><td>From … to … years.</td></tr>
+  <tr><td><strong>Height</strong></td><td>From … to … cm.</td></tr>
+  <tr><td><strong>Objective</strong></td><td>Amateur, Competitive, Professional, Teacher, School.</td></tr>
+  <tr><td><strong>Verified only</strong></td><td>Only profiles with the ✓ badge.</td></tr>
+  <tr><td><strong>Recently active</strong></td><td>Only people who used the app in the last 30 days.</td></tr>
+  <tr><td><strong>Minimum rating</strong></td><td>Only people with an average of at least … stars.</td></tr>
+  <tr><td><strong>With video</strong></td><td>Only profiles with at least one video.</td></tr>
+  <tr><td><strong>Premium only</strong></td><td>Only Premium members.</td></tr>
+  <tr><td><strong>Sort</strong></td><td>Default, or by Rating (highest averages first).</td></tr>
+</table>
+
+<h3>11.3 Results</h3>
+<p>Each card shows photo, name, age, city, main styles and any badges (✓, Premium, Featured, contact level, video). Tap the card to open the profile. Scroll to load more results. The globe 🌍 at the top (<span class="ui">View on map</span>) shows the same people on the map.</p>
+
+<div class="es">Luca is looking for a Liscio partner for competitions. Filters: <em>Liscio Unificato</em>, gender <em>Woman</em>, radius <em>100 km</em>; with Premium he adds objective <em>Competitive</em> and age <em>25–40</em>. Result: 7 people. He opens the profiles with videos, watches how they dance and sends an interest to two of them.</div>
+
+<div class="tip">People whose location isn't up to date don't show up in distance searches: they haven't disappeared, we just don't know where they are. If you find few results, widen the radius or remove a few styles.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="mappa">12. The map</h2>
+
+<h3>12.1 What you see</h3>
+<ul>
+  <li>Open it from the <strong>globe 🌍</strong> in the bottom bar, or from the globe at the top of <strong>Home</strong> and <strong>Search</strong>: from there the map shows the same results, with the filters you have already chosen.</li>
+  <li>At the top choose what to show: <strong>Listings</strong> or <strong>Users</strong>.</li>
+  <li><strong>Pins</strong> are coloured by gender: <strong>blue</strong> man, <strong>pink</strong> woman, <strong>purple</strong> other, <strong>grey-blue</strong> not specified. A <strong>smiley face</strong> is a person, a <strong>♪ note</strong> is a listing (coloured by its author's gender).</li>
+  <li>When several pins are close together they become a <strong>purple circle with a number</strong>. Tap it: the map zooms in until they separate.</li>
+  <li>Tap a pin: a card appears at the bottom; tap it to open the profile or listing.</li>
+</ul>
+
+<h3>12.2 Moving around</h3>
+<ul>
+  <li>Drag to move, pinch with two fingers to zoom. The map doesn't rotate.</li>
+  <li><span class="ui">My location</span> (bottom right) takes you back to your saved location, even if you had chosen another city, and reloads.</li>
+  <li>Zoom follows the <strong>radius</strong>: with 25 km you see the surroundings, with All Italy you see Italy.</li>
+</ul>
+
+<h3>12.3 Map filters</h3>
+<p>Tap <span class="ui">Filters</span>: they're the same as Search (for users) or Home (for listings), with the same Free/Premium rules. Gender and age apply to people, not listings. With <strong>Search from another city</strong> <span class="tag prem">Premium</span> the map moves there, abroad too.</p>
+
+<div class="es">Anna is on holiday in Barcelona: in the map filters she picks «Barcelona — Catalonia, Spain» and sees the bachata listings in the area.</div>
+
+<h3>12.4 Privacy on the map</h3>
+<p>No pin is in the exact spot: the location is rounded and then moved according to each person's chosen precision (<a href="#posizione">6</a>). People who chose «Hidden» don't appear.</p>
+<p>The small <strong>«i»</strong> at the bottom left shows the map credits (© OpenStreetMap).</p>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="interessi">13. Interests: the first step</h2>
+
+<p>An <strong>interest</strong> is the way to say «I'd love to dance with you». There are no free-text messages: this protects everyone from pestering and harassment.</p>
+
+<h3>13.1 Sending an interest</h3>
+<ol class="steps">
+  <li>From a profile or a listing tap <span class="ui">I'm interested</span>.</li>
+  <li>Choose <strong>one ready-made sentence</strong> from six themes (A hello · Let's dance · Same styles · Socials &amp; events · Practice &amp; growth · Let's connect), or no message.</li>
+  <li>Send it: you'll see a confirmation.</li>
+</ol>
+<ul>
+  <li>Limit: <span class="tag free">Free</span> 5 interests in 24 hours · <span class="tag prem">Premium</span> 30.</li>
+  <li>One interest per person: if you try again you'll be told you've already sent one, or that you're already connected.</li>
+  <li>You can withdraw it while it's pending: <span class="ui">Cancel interest</span>.</li>
+</ul>
+
+<h3>13.2 Where to find them</h3>
+<p>From your profile tap <span class="ui">My contacts</span>: two tabs, <strong>Received</strong> and <strong>Sent</strong>. Each interest has a status:</p>
+<table>
+  <tr><th>Status</th><th>Meaning</th></tr>
+  <tr><td><strong>Pending</strong></td><td>The other person hasn't replied yet.</td></tr>
+  <tr><td><strong>Connected ✓</strong></td><td>They accepted: you can see the contacts you've shared with each other.</td></tr>
+  <tr><td><strong>Not answered</strong></td><td>The request was ignored. It isn't said explicitly, out of respect for both.</td></tr>
+  <tr><td><strong>Under review</strong></td><td>Rare: the interest is being checked.</td></tr>
+</table>
+
+<h3>13.3 Replying to an interest you received</h3>
+<ul>
+  <li><span class="ui">Accept</span>: a <strong>share your contacts</strong> panel opens. Switch on the channels you want to show that person and press <span class="ui">Accept and share</span>, or <span class="ui">Accept without sharing</span> (you can share later).</li>
+  <li><span class="ui">Ignore</span>: the interest goes away; the other person sees «Not answered».</li>
+  <li>At any time: <span class="ui">Cancel connection</span> ends the connection.</li>
+</ul>
+
+<div class="es">Marco sends Giulia the interest «Would you like to dance together at one of the next socials?». Giulia gets the notification «Marco is interested!», looks at his profile and videos, taps <em>Accept</em> and shares only Instagram. Marco gets «Giulia accepted! 🎉» and sees her Instagram, but not her WhatsApp.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="contatti">14. Contacts: who sees what</h2>
+
+<h3>14.1 Seeing other people's contacts</h3>
+<p>On someone else's profile, the contacts section always tells you why you can or can't see something:</p>
+<table>
+  <tr><th>Message</th><th>Why</th></tr>
+  <tr><td>You're connected and can see the contacts</td><td>They accepted your interest and shared channels with you.</td></tr>
+  <tr><td>You're connected, but they haven't shared channels with you</td><td>They accepted without sharing, for now.</td></tr>
+  <tr><td>Send an interest to see the contacts</td><td>They use «Only after accepted interest».</td></tr>
+  <tr><td>Only Premium users can see the contacts</td><td>They use «Only Premium users».</td></tr>
+  <tr><td>This user prefers not to share contacts</td><td>They use «Nobody».</td></tr>
+  <tr><td>Complete your profile to see other people's contacts</td><td>You're missing a <strong>photo</strong> or a <strong>city</strong>. People hiding behind an empty profile don't get in touch with anyone.</td></tr>
+</table>
+
+<h3>14.2 Getting in touch</h3>
+<p>When you can see the contacts, tap the contact button and choose the channel. For WhatsApp and email we prepare a message («Hi Giulia, I found you on {{NOME_APP}}! Are you still available for the listing?»), which you can edit before sending.</p>
+
+<h3>14.3 Managing and revoking</h3>
+<ul>
+  <li><span class="ui">Settings → Shared contacts</span>: the list of who sees your contacts and which ones. For each person you can change the channels or tap <span class="ui">Revoke</span>: from then on they no longer see them.</li>
+  <li>From a connected person's profile you can do the same for them only.</li>
+</ul>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="piace">15. Likes, views and ratings</h2>
+
+<table>
+  <tr><th>Feature</th><th>How it works</th></tr>
+  <tr><td><strong>Like</strong> a profile or listing</td><td>Tap the heart; tap again to remove it. The count is public. <span class="tag prem">Premium</span> members see <strong>who</strong> liked their profile.</td></tr>
+  <tr><td><strong>Like</strong> a video</td><td>On someone else's profile there's a heart next to each video: tap it to like, tap again to remove it. The count is public. On your own profile you see how many likes each video got, but not who gave them.</td></tr>
+  <tr><td><strong>Who viewed you</strong></td><td>Every visit to your profile is counted. <span class="tag free">Free</span> you see the number, <span class="tag prem">Premium</span> the list of people.</td></tr>
+  <tr><td><strong>Rating</strong></td><td>On someone else's profile tap <span class="ui">Rate …</span> and choose 1 to 5 stars (Poor · Fair · Good · Great · Excellent). Stars only, no comments. You can change it or remove it (<span class="ui">Remove my rating</span>). The average appears on the profile.</td></tr>
+  <tr><td><strong>Contact level</strong></td><td>The Connected / Well connected / Highly connected badge shows how many people have shared their contacts with that user (from 1, 5, 10). It's a sign of trust from the community.</td></tr>
+</table>
+<div class="tip">Only rate people you've actually danced with, and be honest: ratings help everyone choose.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="sicurezza">16. Blocking and reporting</h2>
+
+<div class="warn">If you're in immediate danger call <strong>112</strong>. {{NOME_APP}} is not an emergency service.</div>
+
+<h3>16.1 Blocking</h3>
+<p>From a profile (<strong>⋮</strong> menu at the top) tap <span class="ui">Block user</span>. It's <strong>immediate</strong> and only affects you: that person can no longer find you in search or on the map and can't send you interests. They aren't notified. To unblock: <span class="ui">Settings → Blocked users → Unblock</span>.</p>
+
+<h3>16.2 Reporting</h3>
+<p>On a profile (⋮ menu → <span class="ui">Report</span>) or on a listing (flag). Reporting has the case reviewed by a member of our staff.</p>
+<ol class="steps">
+  <li>Choose the <strong>reason</strong>:
+    <ul>
+      <li>Personal safety, stalking</li>
+      <li>Harassment or threats</li>
+      <li>Sexual content or requests</li>
+      <li>Underage user</li>
+      <li>Scam or fraud</li>
+      <li>Pretending to be someone else</li>
+      <li>Fake profile</li>
+      <li>Inappropriate content</li>
+      <li>Someone else's photos or data without consent</li>
+      <li>Collecting contacts / spam</li>
+      <li>Duplicate or off-topic listing (listings only)</li>
+      <li>Other</li>
+    </ul>
+  </li>
+  <li>For many reasons we ask <strong>Where did it happen?</strong>: Inside {{NOME_APP}} · During or after a meet-up · On WhatsApp · On Instagram · Somewhere else. What happens <strong>outside</strong> the app counts too: it helps us understand what we can verify.</li>
+  <li>Write <strong>What happened?</strong>: it really helps. Dates, words, circumstances.</li>
+  <li>Confirm the <strong>declaration</strong> («I declare that what I have reported is true to the best of my knowledge») and send.</li>
+</ol>
+<ul>
+  <li>The person you reported will <strong>never</strong> know it was you.</li>
+  <li>You can send up to 5 reports in 24 hours; the same person or listing can be reported once while the case is open.</li>
+  <li>If many of your reports turn out to be unfounded, your <strong>reliability</strong> drops and the limit becomes <strong>2 reports in 24 hours</strong>.</li>
+  <li>If others have already reported the same thing, we tell you: reports end up in the same case.</li>
+  <li><strong>Without an account</strong> you can report from the public <a href="./segnala-en.html">Report</a> page.</li>
+  <li>For technical problems or anything else: <span class="ui">Settings → Report a problem or content</span>.</li>
+</ul>
+
+<h3>16.3 Tips for meeting up</h3>
+<ul>
+  <li>The first time, meet in a public place: a social night, a school, a rehearsal room.</li>
+  <li>Tell a friend.</li>
+  <li>The ✓ badge means we checked the profile, <strong>not</strong> that the person is trustworthy: always use common sense.</li>
+  <li>Nobody should ask you for money: if it happens, report it as «Scam or fraud».</li>
+</ul>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="provvedimenti">17. After a report: measures and appeals</h2>
+
+<p>Every report is read by a person. If it's founded, the measure is <strong>proportionate</strong>. Whoever receives it is always notified, with reason and duration, in <span class="ui">Settings → Account status and notices</span> (unread notices are highlighted with <strong>NEW</strong>).</p>
+
+<table>
+  <tr><th>Notice</th><th>What it means</th></tr>
+  <tr><td><strong>Warning</strong></td><td>Founded report, no restriction: a reminder to follow the rules.</td></tr>
+  <tr><td><strong>Formal warning</strong></td><td>As above, but if it happens again the account may be restricted or suspended.</td></tr>
+  <tr><td><strong>Content removed</strong></td><td>A photo, text or listing was taken down. The account stays active.</td></tr>
+  <tr><td><strong>Features temporarily restricted</strong></td><td>Until a date you can't publish or edit listings, send interests or leave ratings. Everything else works.</td></tr>
+  <tr><td><strong>Account temporarily suspended</strong></td><td>You can't use the app until the date shown.</td></tr>
+  <tr><td><strong>Account excluded</strong></td><td>Permanent exclusion, for serious violations.</td></tr>
+  <tr><td><strong>Review in progress</strong></td><td>While we check a report your profile doesn't appear in searches; otherwise you use the app normally.</td></tr>
+  <tr><td><strong>Review concluded</strong></td><td>The check ended without measures.</td></tr>
+</table>
+
+<h3>17.1 Asking for an appeal</h3>
+<p>Every measure has a <strong>code</strong>. If you think we got it wrong, within <strong>30 days</strong> write to the address shown in the notice, quoting the code. The case is reopened and, in the meantime, the measure is lifted. You'll receive one of these notices:</p>
+<ul>
+  <li><strong>Appeal in progress</strong> — we're reviewing; you can use the app normally.</li>
+  <li><strong>Appeal upheld</strong> — you were right: the measure is cancelled.</li>
+  <li><strong>Appeal concluded</strong> — we confirm the decision.</li>
+</ul>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="punti">18. Safety Points</h2>
+
+<p>When one of your reports is <strong>confirmed</strong> you earn points, which you can turn into Premium without paying. You'll find them in <span class="ui">Settings → Safety Points</span>.</p>
+<ul>
+  <li>How many: <strong>10 points</strong> for a confirmed report, <strong>up to 20</strong> if it was decisive, <strong>3</strong> if the case was already known thanks to others.</li>
+  <li>Rewards close together: if you've already received other rewards in the last <strong>7 days</strong>, the new one is worth less. The second is worth <strong>80%</strong>, the third <strong>50%</strong>, the fourth <strong>20%</strong>; from the fifth on you earn no points until the earlier rewards fall outside the 7-day window.</li>
+  <li>Cap: at most <strong>100 points in 30 days</strong>. Once reached, later confirmed reports will pay again further on.</li>
+  <li>Reporting at random doesn't pay: unfounded reports lower the weight of yours.</li>
+  <li>If a case is reopened and cancelled, the related points are <strong>clawed back</strong> (you'll see it in your history).</li>
+</ul>
+<h3>18.1 The shop</h3>
+<table>
+  <tr><th>Cost</th><th>You get</th></tr>
+  <tr><td class="num">100 points</td><td>1 day of Premium</td></tr>
+  <tr><td class="num">250 points</td><td>3 days of Premium</td></tr>
+  <tr><td class="num">500 points</td><td>7 days of Premium</td></tr>
+</table>
+<p>Tap <span class="ui">Redeem</span> and confirm. If you already have a subscription, the days are <strong>added</strong>. During the <strong>launch promo</strong> the shop is closed (you're already Premium): your points stay yours for later. The same screen shows your balance, points earned and used, and your full history.</p>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="verifica">19. Profile verification (✓ badge)</h2>
+
+<p>In <span class="ui">Settings → Profile verification</span> you see which requirements you already meet:</p>
+<ul>
+  <li>Profile photo present</li>
+  <li>At least 3 dance styles</li>
+  <li>Bio of at least 50 characters</li>
+  <li>City set</li>
+  <li>Profile at least 70% complete</li>
+</ul>
+<p>When they're all met tap <span class="ui">Send verification request</span>: we reply within 48 hours. With the badge you appear in the <strong>Verified only</strong> filter.</p>
+<div class="warn">The ✓ badge means we checked the profile, not that the person is trustworthy.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="premium">20. Premium, promo and boosts</h2>
+
+<div class="box"><strong>At launch {{NOME_APP}} is free for everyone.</strong> During the launch promo all Premium features are unlocked, at no cost. When it ends we'll let you know well in advance, and everything you've created (photos, videos, listings) will stay yours.</div>
+
+<h3>20.1 Free and Premium compared</h3>
+<table>
+  <tr><th>Feature</th><th>Free</th><th>Premium</th></tr>
+  <tr><td>Active listings at once</td><td>2</td><td>10</td></tr>
+  <tr><td>Listing duration</td><td>30 days</td><td>90 days</td></tr>
+  <tr><td>Gallery photos</td><td>1</td><td>10</td></tr>
+  <tr><td>Dance styles on your profile</td><td>3</td><td>unlimited</td></tr>
+  <tr><td>Profile videos</td><td>—</td><td>5</td></tr>
+  <tr><td>Search filters</td><td>basic</td><td>advanced</td></tr>
+  <tr><td>Search radius</td><td>up to 100 km</td><td>up to All Italy, and from other cities</td></tr>
+  <tr><td>Interests in 24 hours</td><td>5</td><td>30</td></tr>
+  <tr><td>Move a listing to the top</td><td>every 24 hours</td><td>every 6 hours</td></tr>
+  <tr><td>Feature (24 hours)</td><td>with a boost</td><td>unlimited, profile too</td></tr>
+  <tr><td>Who viewed you / Who liked you</td><td>number only</td><td>full list</td></tr>
+  <tr><td>Position in the feed</td><td>standard</td><td>priority</td></tr>
+  <tr><td>Premium badge</td><td>—</td><td>✓</td></tr>
+</table>
+
+<h3>20.2 How to get it</h3>
+<ul>
+  <li><strong>Launch promo</strong>: now, for everyone.</li>
+  <li><strong>Safety Points</strong>: from 1 to 7 days (see <a href="#punti">18</a>).</li>
+  <li><strong>Subscription</strong>, monthly or yearly, when available: from <span class="ui">Settings → Go Premium</span>. It renews automatically and you can cancel any time from Google Play. If you change phone: <span class="ui">Restore purchases</span>.</li>
+</ul>
+
+<h3>20.3 Boosts</h3>
+<p>A <strong>boost</strong> features one of your listings for 24 hours. Premium members don't need them; on Free, once they're on sale, you buy them individually and use them from <span class="ui">My Ads → Feature</span>. The 🚀 number at the top tells you how many you have.</p>
+
+<div class="warn">Deleting your account does <strong>not</strong> cancel your subscription: cancel it first from Google Play.</div>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="notifiche">21. Notifications</h2>
+<table>
+  <tr><th>When</th><th>What you get</th></tr>
+  <tr><td>Someone sends you an interest</td><td>«… is interested!» — tap to see the request.</td></tr>
+  <tr><td>Someone accepts your interest</td><td>«… accepted! 🎉» — tap to open their profile and contacts.</td></tr>
+  <tr><td>One of your listings is about to expire</td><td>A reminder — tap to renew it.</td></tr>
+  <tr><td>A notice about your account</td><td>An account update — tap to read it.</td></tr>
+</table>
+<p>Notifications arrive in the language you chose in the app. They're split into two groups, <strong>Interests</strong> and <strong>General</strong>, which you can turn off separately in Android settings (phone Settings → Apps → {{NOME_APP}} → Notifications).</p>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="impostazioni">22. Settings, item by item</h2>
+<p>From your profile, gear icon at the top.</p>
+<table>
+  <tr><th>Item</th><th>What it's for</th></tr>
+  <tr><td><strong>How {{NOME_APP}} works</strong></td><td>The short tutorial, eight pages.</td></tr>
+  <tr><td><strong>Complete guide</strong></td><td>This guide.</td></tr>
+  <tr><td><strong>Email</strong></td><td>The address you sign in with.</td></tr>
+  <tr><td><strong>Edit profile</strong></td><td>See <a href="#modifica-profilo">5</a>.</td></tr>
+  <tr><td><strong>Go Premium / Manage subscription</strong></td><td>See <a href="#premium">20</a>. During the promo you'll see that Premium is free.</td></tr>
+  <tr><td><strong>Shared contacts</strong></td><td>Who sees your contacts; change or revoke. See <a href="#contatti">14</a>.</td></tr>
+  <tr><td><strong>Blocked users</strong></td><td>See and unblock. See <a href="#sicurezza">16</a>.</td></tr>
+  <tr><td><strong>Profile verification</strong></td><td>Requirements and ✓ badge request. See <a href="#verifica">19</a>.</td></tr>
+  <tr><td><strong>Account status and notices</strong></td><td>Your account's status and messages. See <a href="#provvedimenti">17</a>.</td></tr>
+  <tr><td><strong>Safety Points</strong></td><td>Balance, shop, history. See <a href="#punti">18</a>.</td></tr>
+  <tr><td><strong>Dark Mode</strong></td><td>Dark or light theme.</td></tr>
+  <tr><td><strong>App language</strong></td><td>Italian or English (also from the selector at the top of your profile).</td></tr>
+  <tr><td><strong>Privacy Policy · Terms of Service</strong></td><td>The legal documents, in the app's language.</td></tr>
+  <tr><td><strong>Credits and licences</strong></td><td>Who provides the map and the city data.</td></tr>
+  <tr><td><strong>Usage statistics</strong></td><td>On or off: if on, you help us understand what to improve.</td></tr>
+  <tr><td><strong>Request my data</strong></td><td>Prepares an email to receive a copy of your data (GDPR).</td></tr>
+  <tr><td><strong>Report a problem or content</strong></td><td>Prepares an email to support with technical details already filled in.</td></tr>
+  <tr><td><strong>App version · Rate the app</strong></td><td>The installed version; a review on Google Play helps us a lot.</td></tr>
+  <tr><td><strong>Sign out</strong></td><td>Ends the session on this phone.</td></tr>
+  <tr><td><strong>Delete account</strong></td><td>See <a href="#account">23</a>.</td></tr>
+</table>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="account">23. Your data and your account</h2>
+<ul>
+  <li><strong>A copy of your data</strong>: <span class="ui">Settings → Request my data</span> prepares the request; we reply by email.</li>
+  <li><strong>Deleting your account</strong>: <span class="ui">Settings → Delete account</span>, then confirm. Profile, photos, listings and contacts are deleted and this can't be undone. If you have a subscription, <strong>cancel it first</strong> from Google Play. If the phone asks you to sign in again for security, sign out, sign back in and try again.</li>
+  <li><strong>Updates</strong>: when there's a new version we let you know (you can update later). If a version is no longer supported you'll see that an update is required: update from the store to keep using the app.</li>
+  <li>How we handle your data is explained in the <a href="./privacy-en.html">Privacy Policy</a>.</li>
+</ul>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="faq">24. Frequently asked questions</h2>
+
+<details><summary>I don't appear in searches: why?</summary>
+<p>Check three things: that <strong>Visible profile</strong> is on (5.10), that your <strong>location is up to date</strong> (badge on your profile, <a href="#posizione">6</a>), and that there's no <strong>Review in progress</strong> (Settings → Account status and notices).</p></details>
+
+<details><summary>I accepted an interest but the other person says they can't see my contacts.</summary>
+<p>You probably accepted without sharing, or you use «Only Premium users» and the other person is Free. Go to Settings → Shared contacts and check the channels for that person.</p></details>
+
+<details><summary>I can't publish a listing.</summary>
+<p>You need at least one contact on your profile (5.8). If you already have the maximum number of active listings (2 or 10), deactivate or delete one. If your account has restricted features, it's written in Account status and notices.</p></details>
+
+<details><summary>My listing is «Under review» or «Rejected».</summary>
+<p>Usually there's a contact (phone, email, link) or a disallowed word in the text. Remove it with Edit: if it was rejected, it's republished automatically.</p></details>
+
+<details><summary>My photo doesn't show.</summary>
+<p>Every new photo is approved before it's published: you'll see «under review» until it's checked.</p></details>
+
+<details><summary>I can't see anyone's contacts.</summary>
+<p>Add a <strong>photo</strong> and your <strong>city</strong> to your profile: they're required to see other people's contacts.</p></details>
+
+<details><summary>I've reached the interest limit.</summary>
+<p>On the free plan you can send 5 in 24 hours; with Premium 30. It counts the last 24 hours, not the calendar day.</p></details>
+
+<details><summary>Someone is bothering me outside the app, on WhatsApp.</summary>
+<p>Block them in the app and report them choosing «On WhatsApp» as the place. If you feel in danger call 112.</p></details>
+
+<details><summary>The map is empty.</summary>
+<p>Check the mode (Listings or Users), the radius and the active filters. If you're in an area with few members, try «All Italy» or another city.</p></details>
+
+<details><summary>What happens to my data if I delete my account?</summary>
+<p>It's deleted; some information related to reports and measures may be kept for the time stated in the Privacy Policy.</p></details>
+
+<details><summary>I changed phone: do I lose Premium?</summary>
+<p>No: sign in with the same account. If you have a subscription, tap «Restore purchases» in Premium.</p></details>
+
+<details><summary>Can I use the app in Italian?</summary>
+<p>Yes: Settings → App language, or the selector at the top of your profile. Notifications and legal pages follow the language you choose.</p></details>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<h2 id="glossario">25. Glossary</h2>
+<table>
+  <tr><td><strong>Listing</strong></td><td>A public message looking for a partner, with style, level, area and duration.</td></tr>
+  <tr><td><strong>Interest</strong></td><td>A contact request to another person, with a ready-made sentence.</td></tr>
+  <tr><td><strong>Connection</strong></td><td>An accepted interest: from then on you can see shared contacts.</td></tr>
+  <tr><td><strong>Channel</strong></td><td>A contact: WhatsApp, Instagram, TikTok, email or website.</td></tr>
+  <tr><td><strong>Featured</strong></td><td>A listing or profile kept at the top for 24 hours.</td></tr>
+  <tr><td><strong>Move to top</strong></td><td>Putting a listing back at the top of the board, as if new.</td></tr>
+  <tr><td><strong>Boost</strong></td><td>A credit to feature a listing.</td></tr>
+  <tr><td><strong>✓ badge</strong></td><td>Profile checked by our staff.</td></tr>
+  <tr><td><strong>Contact level</strong></td><td>How many people have shared their contacts with that user.</td></tr>
+  <tr><td><strong>Safety Points</strong></td><td>Points for confirmed reports, to turn into Premium.</td></tr>
+  <tr><td><strong>Measure</strong></td><td>The decision taken after a founded report (from a warning to exclusion).</td></tr>
+  <tr><td><strong>Appeal</strong></td><td>The request to review a measure, within 30 days.</td></tr>
+  <tr><td><strong>Launch promo</strong></td><td>The initial period when Premium is free for everyone.</td></tr>
+</table>
+
+<footer>
+  {{NOME_APP}} · <a href="./index-en.html">Legal documents</a> · <a href="./privacy-en.html">Privacy</a> · <a href="./terms-en.html">Terms</a> · <a href="./segnala-en.html">Report</a>
+</footer>
+</div>
+</main>
+</body>
+</html>

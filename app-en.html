@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{NOME_APP}} — the app to find someone to dance with</title>
+<meta name="description" content="Find your dance partner near you: profiles, listings, search by style and level, map. Free at launch. Join the waiting list.">
+<meta property="og:title" content="{{NOME_APP}} — the app to find someone to dance with">
+<meta property="og:description" content="Find your dance partner near you: profiles, listings, search by style and level, map. Free at launch. Join the waiting list.">
+<meta name="robots" content="index,follow">
+<link rel="alternate" hreflang="it" href="./app.html">
+<link rel="alternate" hreflang="en" href="./app-en.html">
+<link rel="stylesheet" href="./legal.css">
+<script src="./legal.js" defer></script>
+<style>
+  body{font-size:17px}
+  .hero{background:linear-gradient(135deg,var(--verde) 0%,var(--viola) 110%);color:#fff;padding:44px 20px 56px;position:relative;overflow:hidden}
+  .hero .wrap{padding:0}
+  .hero h1{font-size:2.1rem;line-height:1.15;margin:22px 0 10px}
+  .hero p.lead{font-size:1.12rem;opacity:.95;margin:0 0 22px;max-width:560px}
+  .pill{display:inline-block;background:rgba(255,255,255,.18);border-radius:999px;padding:5px 14px;font-size:.9rem;font-weight:600}
+  .cd{display:flex;gap:10px;margin:18px 0 6px;flex-wrap:wrap}
+  .cd div{background:rgba(255,255,255,.16);border-radius:14px;padding:10px 14px;min-width:74px;text-align:center}
+  .cd b{display:block;font-size:1.6rem;line-height:1.1}
+  .cd span{font-size:.78rem;opacity:.9;text-transform:uppercase;letter-spacing:.5px}
+  .btn{display:inline-block;background:#fff;color:var(--viola);font-weight:700;border-radius:14px;padding:13px 22px;text-decoration:none;border:0;font-size:1rem;cursor:pointer}
+  .btn:hover{opacity:.93}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:18px 0}
+  .feat{border:1px solid var(--line);border-radius:16px;padding:18px}
+  .feat .ic{font-size:1.7rem}
+  .feat strong{display:block;margin:6px 0 4px;color:var(--viola)}
+  .feat p{margin:0;color:var(--muted);font-size:.95rem}
+  .steps{counter-reset:s;list-style:none;padding:0}
+  .steps li{counter-increment:s;position:relative;padding:0 0 14px 46px}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--viola-soft);color:var(--viola);font-weight:700;display:flex;align-items:center;justify-content:center}
+  form.wl{border:1px solid #e4d8f7;background:var(--viola-soft);border-radius:18px;padding:20px;margin:18px 0}
+  form.wl label{display:block;font-weight:600;margin:12px 0 6px}
+  form.wl input[type=email],form.wl select{width:100%;padding:12px 14px;border:1px solid #d7cdea;border-radius:12px;font-size:1rem;background:#fff}
+  .radios{display:flex;gap:10px;flex-wrap:wrap}
+  .radios label{font-weight:500;margin:0;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #d7cdea;border-radius:12px;padding:10px 14px;cursor:pointer}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-weight:400!important;font-size:.9rem;color:var(--ink)}
+  .consent input{margin-top:4px}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  form.wl .btn{background:var(--viola);color:#fff;width:100%;margin-top:16px}
+  #msg{margin-top:12px;font-weight:600}
+  #msg.ok{color:#1d8a57} #msg.err{color:var(--err)}
+  .small{font-size:.84rem;color:var(--muted)}
+  .social{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+  .social a{border:1px solid var(--line);border-radius:12px;padding:9px 14px;text-decoration:none;font-weight:600}
+  details{border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:10px 0}
+  details summary{cursor:pointer;font-weight:600}
+</style>
+</head>
+<body>
+<header class="hero">
+  <nav class="lang" aria-label="Language">
+    <a href="./app.html" data-lang="it" >IT</a>
+    <a href="./app-en.html" data-lang="en" aria-current="true">EN</a>
+  </nav>
+  <div class="wrap" style="max-width:var(--maxw);margin:0 auto;padding:0 20px">
+    <div class="brand"><span class="note">&#9835;</span> {{NOME_APP}}</div>
+    <h1>Find someone to dance with,<br>near you.</h1>
+    <p class="lead">Competition partners, social-night companions, courses, students and teachers: {{NOME_APP}} connects dancers by style, level and distance. Salsa, bachata, tango, ballroom, latin, swing and much more.</p>
+    <span class="pill" id="when">Coming soon on Android · then iPhone</span>
+    <div class="cd" id="cd" hidden>
+      <div><b id="cd-d">0</b><span>days</span></div>
+      <div><b id="cd-h">0</b><span>hours</span></div>
+      <div><b id="cd-m">0</b><span>minutes</span></div>
+    </div>
+    <p style="margin-top:22px"><a class="btn" href="#iscriviti">Tell me when it's out</a></p>
+  </div>
+</header>
+<main>
+<div class="wrap">
+
+<h2>What you'll be able to do</h2>
+<div class="grid">
+  <div class="feat"><div class="ic">🔎</div><strong>Find the right partner</strong><p>Filters for style, level, gender, age, height, objective and distance. Find people who dance like you, where you are.</p></div>
+  <div class="feat"><div class="ic">📣</div><strong>Post listings</strong><p>«Looking for a bachata partner for social nights in Rimini»: write what you're looking for and let people find you.</p></div>
+  <div class="feat"><div class="ic">🌍</div><strong>See who dances nearby</strong><p>A map of people and listings in your area, or in the city where you go dancing.</p></div>
+  <div class="feat"><div class="ic">🛡️</div><strong>Contacts only if you want</strong><p>First an interest, then you choose which contacts to show. No numbers on display, and every report is read by a real person.</p></div>
+</div>
+
+<h2>How it works</h2>
+<ol class="steps">
+  <li><strong>Create your profile</strong>: your styles with your level, what you're looking for, a photo and, if you like, videos of you dancing.</li>
+  <li><strong>Search or post</strong>: filter people near you, or write a listing and wait for replies.</li>
+  <li><strong>Connect</strong>: send an interest; if it's accepted, you see the contacts the other person chose to share with you.</li>
+</ol>
+
+<div class="box"><strong>Free for everyone at launch.</strong> Every feature, at no cost, for the whole launch period. All you need is to be 18+ and love dancing.</div>
+
+<h2 id="iscriviti">Join the waiting list</h2>
+<p>Leave us your email: we'll write to you on the day the app comes out on your phone. Nothing else.</p>
+<form class="wl" id="wl" novalidate>
+  <label for="email">Your email</label>
+  <input type="email" id="email" name="email" autocomplete="email" required placeholder="name@example.com">
+
+  <label>Which phone do you have?</label>
+  <div class="radios">
+    <label><input type="radio" name="platform" value="ANDROID" checked> Android</label>
+    <label><input type="radio" name="platform" value="IOS"> iPhone</label>
+  </div>
+
+  <label for="source">How did you hear about us? <span class="small">(optional)</span></label>
+  <select id="source" name="source">
+    <option value="">—</option>
+    <option value="instagram">Instagram</option>
+    <option value="tiktok">TikTok</option>
+    <option value="facebook">Facebook</option>
+    <option value="scuola">Dance school</option>
+    <option value="serata">At a social night</option>
+    <option value="amico">From a friend</option>
+    <option value="altro">Other</option>
+  </select>
+
+  <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+  <label class="consent"><input type="checkbox" id="consent"> <span>I want to receive an email when the app is available. I've read the notice below.</span></label>
+
+  <button class="btn" type="submit" id="send">Notify me</button>
+  <div id="msg" role="status" aria-live="polite"></div>
+</form>
+<p class="small">Short notice: the controller is Paolo Marchionetti (paolo.marchionetti@gmail.com). We use your email, the phone you chose, your language and how you heard about us (optional) only to tell you when the app is out (2–3 emails at most), to know how many people are waiting for the iPhone version and where sign-ups come from. Legal basis: your consent. Data is stored on servers in the European Union (Supabase) and deleted 30 days after the launch email, or earlier if you ask us at the address above. You can exercise your rights of access, rectification, erasure and objection at any time, and complain to the Italian data protection authority. Details in the <a href="./privacy-en.html">Privacy Policy</a>.</p>
+
+<h2>Follow us</h2>
+<p>Previews, behind the scenes and the release date, before anyone else.</p>
+<div class="social">
+  <a href="{{INSTAGRAM_URL}}" rel="noopener">Instagram</a>
+  <a href="{{TIKTOK_URL}}" rel="noopener">TikTok</a>
+  <a href="{{FACEBOOK_URL}}" rel="noopener">Facebook</a>
+</div>
+
+<h2>Questions</h2>
+<details><summary>When is it coming out?</summary><p>On Android by the end of 2026; on iPhone a few months later. If you sign up, we'll let you know on the phone you chose.</p></details>
+<details><summary>How much does it cost?</summary><p>At launch it's free for everyone, with every feature. Later there will be an optional subscription for advanced features: you'll always be able to use the app for free, and what you create stays yours.</p></details>
+<details><summary>Is it a dating app?</summary><p>No. It's made for dancers looking for a partner, a social-night companion, a course, students or teachers. Community rules forbid requests of any other kind, and every report is read by a person.</p></details>
+<details><summary>Who sees my number?</summary><p>Nobody, unless you want them to. Contacts are only visible after you accept an interest, and you choose which ones to show (WhatsApp, Instagram, email…). You can revoke them any time.</p></details>
+<details><summary>Does it work outside Italy?</summary><p>Yes: you can search and appear in any city. We're starting with the schools and social nights of Pesaro, Rimini and Bologna, but the app is for everyone.</p></details>
+<details><summary>I run a dance school: can I use it?</summary><p>Of course: create your school's profile, post listings to find students or partners for your courses, and show your school's website to whoever you like.</p></details>
+
+
+<footer>
+  {{NOME_APP}} · <a href="./privacy-en.html">Privacy</a> · <a href="./terms-en.html">Terms</a> · <a href="mailto:paolo.marchionetti@gmail.com">Contact</a>
+</footer>
+</div>
+</main>
+
+<script>
+// ── Impostazioni: data del lancio (ora italiana). Lasciala vuota finché non è decisa ──
+var LAUNCH_ISO = "";            // es. "2026-11-26T18:00:00+01:00"
+var SUPABASE_URL = "https://zhnybsuqpscfqhrmngmy.supabase.co";
+var SUPABASE_KEY = "sb_publishable_-AUVZaUlKkUqD6z2hCvJrg_B7R856lg";   // chiave PUBBLICA, la stessa dell'app
+var LANG = "en";
+var T = {"launchOn": "Out on", "outNow": "It's out! Get it on Google Play", "sending": "Sending…", "send": "Notify me", "OK": "Done! We'll write to you on release day. 💃", "ALREADY": "You were already on the list: we've updated your details.", "INVALID_EMAIL": "Please check your email address.", "DISPOSABLE": "Please use a real email address, not a temporary one.", "NO_CONSENT": "Tick the box to give us your consent.", "INVALID_PLATFORM": "Choose Android or iPhone.", "BUSY": "Too much traffic right now: please try again in a few minutes.", "ERR": "Something went wrong. Please try again shortly."};
+
+// Conto alla rovescia
+(function(){
+  if(!LAUNCH_ISO) return;
+  var end = new Date(LAUNCH_ISO).getTime(); if(isNaN(end)) return;
+  var box = document.getElementById("cd"); box.hidden = false;
+  document.getElementById("when").textContent = T.launchOn + " " +
+    new Date(LAUNCH_ISO).toLocaleDateString(LANG === "en" ? "en-GB" : "it-IT", {day:"numeric", month:"long", year:"numeric"});
+  function tick(){
+    var ms = Math.max(0, end - Date.now());
+    document.getElementById("cd-d").textContent = Math.floor(ms / 864e5);
+    document.getElementById("cd-h").textContent = Math.floor(ms % 864e5 / 36e5);
+    document.getElementById("cd-m").textContent = Math.floor(ms % 36e5 / 6e4);
+    if(ms <= 0){ document.getElementById("when").textContent = T.outNow; box.hidden = true; }
+  }
+  tick(); setInterval(tick, 30000);
+})();
+
+// Lista d'attesa
+document.getElementById("wl").addEventListener("submit", function(ev){
+  ev.preventDefault();
+  var f = ev.target, msg = document.getElementById("msg"), btn = document.getElementById("send");
+  var email = f.email.value.trim();
+  msg.className = ""; msg.textContent = "";
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email)){ msg.className="err"; msg.textContent=T.INVALID_EMAIL; return; }
+  if(!document.getElementById("consent").checked){ msg.className="err"; msg.textContent=T.NO_CONSENT; return; }
+  btn.disabled = true; btn.textContent = T.sending;
+  fetch(SUPABASE_URL + "/rest/v1/rpc/join_waitlist", {
+    method: "POST",
+    headers: {"Content-Type":"application/json", "apikey":SUPABASE_KEY, "Authorization":"Bearer " + SUPABASE_KEY},
+    body: JSON.stringify({
+      p_email: email,
+      p_platform: (f.querySelector("input[name=platform]:checked") || {}).value || "ANDROID",
+      p_lang: LANG, p_source: f.source.value, p_consent: true, p_hp: f.website.value
+    })
+  }).then(function(r){ return r.json(); }).then(function(res){
+    var st = (res && res.status) || "ERR";
+    if(st === "OK" || st === "ALREADY"){ msg.className="ok"; msg.textContent = T[st]; f.reset(); }
+    else { msg.className="err"; msg.textContent = T[st] || T.ERR; }
+  }).catch(function(){ msg.className="err"; msg.textContent=T.ERR; })
+    .finally(function(){ btn.disabled = false; btn.textContent = T.send; });
+});
+</script>
+</body>
+</html>
